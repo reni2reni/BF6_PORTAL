@@ -5,3 +5,5 @@ MP_MINE_Sand.spatial.json : 上記マップの変換済みファイル
 i_my_me_mine_experience.json : エクスペリエンスファイル (インポートすればこれ１つで実行可能)
 
 i_my_me_mine_workspace.json : ワークスペースファイル　
+
+注意！　基本足元を撃つか？ナイフで指しても可能ですが　スレッジハンマーを持つのを忘れないように（設定でそれ以外を使用禁止にして）
