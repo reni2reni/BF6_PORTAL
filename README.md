@@ -1,7 +1,7 @@
 
 i_my_me_mine_workspace.json : ワークスペースファイル
 
-MAIN_Sand.spatial.json : マップファイル（変換済み）
+MINE_Sand.spatial.json : マップファイル（砂漠マップ変換済み）
 
 新しいエクスペリエンスにそれぞれインポートしてください
 
