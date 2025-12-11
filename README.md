@@ -1,4 +1,2 @@
 
 Battlefield　PORTAL プロジェクトファイル
-
-
