@@ -10,12 +10,10 @@ let cspeedR=10; //Capture release speed
 
 //User settings up to here
 
-
 let capspeed: number[]=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 let p=0;
 export async function OnGameModeStarted() {
 
- // TODO: make this function "async"
  while (true) {
 
   for (let i = 0; i < cpointno; i++) {
@@ -26,7 +24,6 @@ export async function OnGameModeStarted() {
   await mod.Wait(0.2);
  }
 }
-
 
 function CaptureSpeed() {
 
