@@ -5,8 +5,8 @@ import * as modlib from 'modlib';
 
 let cpointno=5; //Number of CapturePoints
 let capID=200;  //First capturepoint ID [(100),101,102...]
-let cspeedC=10;//Capture Control speed
-let cspeedR=10;//Capture release speed
+let cspeedC=10; //Capture Control speed
+let cspeedR=10; //Capture release speed
 
 //User settings up to here
 
