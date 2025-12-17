@@ -10,6 +10,7 @@ let cspeedR=10; //Capture release speed
 
 //User settings up to here
 
+
 let capspeed: number[]=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 let p=0;
 export async function OnGameModeStarted() {
@@ -29,52 +30,23 @@ export async function OnGameModeStarted() {
 
 function CaptureSpeed() {
 
-capspeed[p+cpointno]=mod.AbsoluteValue(mod.Subtract(
-mod.CountOf(modlib.FilteredArray(
-mod.GetPlayersOnPoint(mod.GetCapturePoint(mod.Add(
-capID,p))),
-(currentArrayElement: any) => mod.Equals(
-mod.GetTeam(currentArrayElement),
-mod.GetTeam(1)))),
-mod.CountOf(modlib.FilteredArray(
-mod.GetPlayersOnPoint(mod.GetCapturePoint(mod.Add(
-capID,p))),
-(currentArrayElement: any) => mod.Equals(
-mod.GetTeam(currentArrayElement),
-mod.GetTeam(2))))));
+capspeed[p+cpointno]=mod.AbsoluteValue(
+mod.CountOf(modlib.FilteredArray(mod.GetPlayersOnPoint(mod.GetCapturePoint(capID+p)),(currentArrayElement: any) => mod.Equals(mod.GetTeam(currentArrayElement),mod.GetTeam(1))))
+-mod.CountOf(modlib.FilteredArray(mod.GetPlayersOnPoint(mod.GetCapturePoint(capID+p)),(currentArrayElement: any) => mod.Equals(mod.GetTeam(currentArrayElement),mod.GetTeam(2)))));
 let spC=capspeed[p+cpointno];
 let spR=capspeed[p+cpointno];
 if(spC>cspeedC){spC=cspeedC}
 if(spR>cspeedR){spR=cspeedR}
- if (mod.GreaterThan(
-mod.Subtract(
-mod.GetCaptureProgress(mod.GetCapturePoint(mod.Add(
-capID,p))),
-capspeed[p],
-),0)) 
-
-{
-  mod.SetCapturePointNeutralizationTime(mod.GetCapturePoint(mod.Add(
-capID,p)),mod.Subtract(
-cspeedR+1,spR));
-  mod.SetCapturePointCapturingTime(mod.GetCapturePoint(mod.Add(
-capID,p)),mod.Subtract(
-cspeedC+1,spC));
-
- } else {
-  if (mod.LessThan(
-mod.Subtract(
-mod.GetCaptureProgress(mod.GetCapturePoint(mod.Add(
-capID,p))),
-capspeed[p],
-),0)) {
-  mod.SetCapturePointCapturingTime(mod.GetCapturePoint(mod.Add(
-capID,p)),mod.Subtract(
-cspeedC+1,spC));
-mod.SetCapturePointNeutralizationTime(mod.GetCapturePoint(mod.Add(
-capID,p)),mod.Subtract(
-cspeedR+1,spR));
+if (mod.GetCaptureProgress(mod.GetCapturePoint(capID+p))-capspeed[p]>0) {
+  mod.SetCapturePointNeutralizationTime(mod.GetCapturePoint(capID+p),cspeedR+1-spR);
+  mod.SetCapturePointCapturingTime(mod.GetCapturePoint(capID+p),cspeedC+1-spC);
+} else {
+if (mod.GetCaptureProgress(mod.GetCapturePoint(capID+p))-capspeed[p]<0){
+mod.SetCapturePointCapturingTime(mod.GetCapturePoint(capID+p),
+cspeedC+1-spC);
+mod.SetCapturePointNeutralizationTime(mod.GetCapturePoint(
+capID+p),
+cspeedR+1-spR);
   }
  }
 }
-
