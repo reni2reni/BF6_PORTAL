@@ -38,12 +38,8 @@ if (mod.GetCaptureProgress(mod.GetCapturePoint(capID+p))-capspeed[p]>0) {
   mod.SetCapturePointNeutralizationTime(mod.GetCapturePoint(capID+p),cspeedR+1-spR);
   mod.SetCapturePointCapturingTime(mod.GetCapturePoint(capID+p),cspeedC+1-spC);
 } else {
-if (mod.GetCaptureProgress(mod.GetCapturePoint(capID+p))-capspeed[p]<0){
-mod.SetCapturePointCapturingTime(mod.GetCapturePoint(capID+p),
-cspeedC+1-spC);
-mod.SetCapturePointNeutralizationTime(mod.GetCapturePoint(
-capID+p),
-cspeedR+1-spR);
+if (mod.GetCaptureProgress(mod.GetCapturePoint(capID+p))-capspeed[p]<0){mod.SetCapturePointCapturingTime(mod.GetCapturePoint(capID+p),cspeedC+1-spC);
+mod.SetCapturePointNeutralizationTime(mod.GetCapturePoint(capID+p),cspeedR+1-spR);
   }
  }
 }
