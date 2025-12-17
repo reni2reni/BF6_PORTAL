@@ -12,7 +12,8 @@ let cspeedR=10;//Capture release speed
 
 let capspeed: number[]=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 let p=0;
-export async function OngoingGlobal_RULE1_Action() {
+export async function OnGameModeStarted() {
+
  // TODO: make this function "async"
  while (true) {
 
@@ -24,13 +25,7 @@ export async function OngoingGlobal_RULE1_Action() {
   await mod.Wait(0.2);
  }
 }
-function OngoingGlobal_RULE1(conditionState: any) {
-let newState = true;
-if (!conditionState.update(newState)) {
- return;
-}
-OngoingGlobal_RULE1_Action();
-}
+
 
 function CaptureSpeed() {
 
@@ -82,25 +77,4 @@ cspeedR+1,spR));
   }
  }
 }
-// global vars
-
-
-// player vars
-
-// team vars
-
-// capture point vars
-
-// mcom vars
-
-// vehicle vars
-
-export function OngoingGlobal() {
-const eventInfo = {};
-let eventNum = 0;
-  OngoingGlobal_RULE1(modlib.getGlobalCondition(eventNum++));
-}
-
-
-// Strings content - add the following to your strings file: 
 
