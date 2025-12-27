@@ -1,0 +1,1963 @@
+{
+    "Portal_Dynamic": [
+        {
+            "name": "TEAM_1_HQ",
+            "AltTeam": "TeamNeutral",
+            "ObjId": 1,
+            "InfantrySpawns": [
+                "TEAM_1_HQ/SpawnPoint_1_1",
+                "TEAM_1_HQ/SpawnPoint_1_2"
+            ],
+            "HQArea": "TEAM_1_HQ/HQ_Team1",
+            "type": "HQ_PlayerSpawner",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -1317.86,
+                "y": 115.816,
+                "z": -739.268
+            },
+            "id": "TEAM_1_HQ",
+            "linked": [
+                "HQArea",
+                "InfantrySpawns"
+            ]
+        },
+        {
+            "name": "HQ_Team1",
+            "type": "PolygonVolume",
+            "id": "TEAM_1_HQ/HQ_Team1",
+            "height": 0,
+            "points": [
+                {
+                    "x": -1313.07814,
+                    "y": 122.96273,
+                    "z": -732.08398
+                },
+                {
+                    "x": -1313.07814,
+                    "y": 122.96273,
+                    "z": -742.08398
+                },
+                {
+                    "x": -1323.07814,
+                    "y": 122.96273,
+                    "z": -742.08398
+                },
+                {
+                    "x": -1323.07814,
+                    "y": 122.96273,
+                    "z": -732.08398
+                }
+            ]
+        },
+        {
+            "name": "SpawnPoint_1_1",
+            "ObjId": 5,
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.999473,
+                "y": 0,
+                "z": 0.0324575
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.0324575,
+                "y": 0,
+                "z": -0.999473
+            },
+            "position": {
+                "x": -1312.34853,
+                "y": 126.9948,
+                "z": -715.6166
+            },
+            "id": "TEAM_1_HQ/SpawnPoint_1_1"
+        },
+        {
+            "name": "SpawnPoint_1_2",
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.92917,
+                "y": 0,
+                "z": -0.36965
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.36965,
+                "y": 0,
+                "z": -0.92917
+            },
+            "position": {
+                "x": -1315.66383,
+                "y": 126.9948,
+                "z": -715.6104
+            },
+            "id": "TEAM_1_HQ/SpawnPoint_1_2"
+        },
+        {
+            "name": "TEAM_2_HQ",
+            "Team": "Team2",
+            "AltTeam": "TeamNeutral",
+            "ObjId": 2,
+            "InfantrySpawns": [
+                "TEAM_2_HQ/SpawnPoint_2_1",
+                "TEAM_2_HQ/SpawnPoint_2_2"
+            ],
+            "HQArea": "TEAM_2_HQ/HQ_Team2",
+            "type": "HQ_PlayerSpawner",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -1334.85,
+                "y": 112.77,
+                "z": -756.355
+            },
+            "id": "TEAM_2_HQ",
+            "linked": [
+                "HQArea",
+                "InfantrySpawns"
+            ]
+        },
+        {
+            "name": "HQ_Team2",
+            "type": "PolygonVolume",
+            "id": "TEAM_2_HQ/HQ_Team2",
+            "height": 0,
+            "points": [
+                {
+                    "x": -1330.35,
+                    "y": 119.91673,
+                    "z": -744.855
+                },
+                {
+                    "x": -1330.35,
+                    "y": 119.91673,
+                    "z": -754.855
+                },
+                {
+                    "x": -1340.35,
+                    "y": 119.91673,
+                    "z": -754.855
+                },
+                {
+                    "x": -1340.35,
+                    "y": 119.91673,
+                    "z": -744.855
+                }
+            ]
+        },
+        {
+            "name": "SpawnPoint_2_1",
+            "type": "SpawnPoint",
+            "right": {
+                "x": 0.97213,
+                "y": 0,
+                "z": -0.234446
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.234446,
+                "y": 0,
+                "z": 0.97213
+            },
+            "position": {
+                "x": -1333.58083,
+                "y": 112.77,
+                "z": -742.1769
+            },
+            "id": "TEAM_2_HQ/SpawnPoint_2_1"
+        },
+        {
+            "name": "SpawnPoint_2_2",
+            "type": "SpawnPoint",
+            "right": {
+                "x": 0.869236,
+                "y": 0,
+                "z": -0.494397
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.494397,
+                "y": 0,
+                "z": 0.869236
+            },
+            "position": {
+                "x": -1323.5457,
+                "y": 112.77,
+                "z": -751.84829
+            },
+            "id": "TEAM_2_HQ/SpawnPoint_2_2"
+        },
+        {
+            "name": "CombatArea",
+            "CombatVolume": "CombatArea/CombatVolume",
+            "type": "CombatArea",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -1167.17,
+                "y": 20.9261,
+                "z": -717.832
+            },
+            "id": "CombatArea",
+            "linked": [
+                "CombatVolume"
+            ]
+        },
+        {
+            "name": "CombatVolume",
+            "type": "PolygonVolume",
+            "id": "CombatArea/CombatVolume",
+            "height": 100,
+            "points": [
+                {
+                    "x": -1339.7557,
+                    "y": 155.3071,
+                    "z": -700.7493
+                },
+                {
+                    "x": -1296.4894,
+                    "y": 155.3071,
+                    "z": -700.9442
+                },
+                {
+                    "x": -1296.4894,
+                    "y": 155.3071,
+                    "z": -760.3867
+                },
+                {
+                    "x": -1339.3658,
+                    "y": 155.3071,
+                    "z": -760.9714
+                }
+            ]
+        },
+        {
+            "name": "DeployCam",
+            "type": "DeployCam",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 0.101056,
+                "z": -0.994881
+            },
+            "front": {
+                "x": 0,
+                "y": 0.994881,
+                "z": 0.101056
+            },
+            "position": {
+                "x": -1286.43,
+                "y": 419.438,
+                "z": -701.466
+            },
+            "id": "Camera3D/DeployCam"
+        },
+        {
+            "name": "FiringRange_Floor_A",
+            "type": "FiringRange_Floor_A",
+            "right": {
+                "x": -5.24537e-07,
+                "y": 0,
+                "z": -12
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 12,
+                "y": 0,
+                "z": -5.24537e-07
+            },
+            "position": {
+                "x": -1296.69,
+                "y": 112.468,
+                "z": -700.858
+            },
+            "id": "FiringRange_Floor_A"
+        },
+        {
+            "name": "PlasterRetainingWall_01_256",
+            "type": "PlasterRetainingWall_01_256",
+            "right": {
+                "x": 13,
+                "y": 0,
+                "z": -3.69482e-14
+            },
+            "up": {
+                "x": 0,
+                "y": 13,
+                "z": 0
+            },
+            "front": {
+                "x": 3.69482e-14,
+                "y": 0,
+                "z": 13
+            },
+            "position": {
+                "x": -1335.06,
+                "y": 89.3166,
+                "z": -718.997
+            },
+            "id": "PlasterRetainingWall_01_256"
+        },
+        {
+            "name": "VAB_FoundationFloor_512_01_Boulder2",
+            "type": "VAB_FoundationFloor_512_01_Boulder",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -1238.39,
+                "y": 110.636,
+                "z": -836.185
+            },
+            "id": "VAB_FoundationFloor_512_01_Boulder2"
+        },
+        {
+            "name": "ConcreteHarborWall_01_256",
+            "type": "ConcreteHarborWall_01_256",
+            "right": {
+                "x": 5,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 5,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 5
+            },
+            "position": {
+                "x": -1336.7,
+                "y": 112.468,
+                "z": -719.298
+            },
+            "id": "ConcreteHarborWall_01_256"
+        },
+        {
+            "name": "ConcreteHarborWall_01_258",
+            "type": "ConcreteHarborWall_01_256",
+            "right": {
+                "x": 5,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 5,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 5
+            },
+            "position": {
+                "x": -1324.2,
+                "y": 112.468,
+                "z": -719.298
+            },
+            "id": "ConcreteHarborWall_01_258"
+        },
+        {
+            "name": "ConcreteHarborWall_01_257",
+            "type": "ConcreteHarborWall_01_256",
+            "right": {
+                "x": 5,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 5,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 5
+            },
+            "position": {
+                "x": -1311.7,
+                "y": 112.468,
+                "z": -719.298
+            },
+            "id": "ConcreteHarborWall_01_257"
+        },
+        {
+            "name": "FX_Gadget_VehicleSupplyCrate_Range_Indicator",
+            "ObjId": 20,
+            "type": "FX_Gadget_VehicleSupplyCrate_Range_Indicator",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -1318.2,
+                "y": 112.782,
+                "z": -736.704
+            },
+            "id": "FX_Gadget_VehicleSupplyCrate_Range_Indicator"
+        },
+        {
+            "name": "FiringRange_Floor_B",
+            "type": "FiringRange_Floor_B",
+            "right": {
+                "x": -8,
+                "y": 0,
+                "z": -1.20797e-06
+            },
+            "up": {
+                "x": 0,
+                "y": 2.5,
+                "z": 0
+            },
+            "front": {
+                "x": 4.52987e-07,
+                "y": 0,
+                "z": -3
+            },
+            "position": {
+                "x": -1298,
+                "y": 126.971,
+                "z": -719.286
+            },
+            "id": "FiringRange_Floor_B"
+        },
+        {
+            "name": "FiringRange_Floor_B2",
+            "type": "FiringRange_Floor_B",
+            "right": {
+                "x": -1,
+                "y": 0,
+                "z": -1.50996e-07
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 1.50996e-07,
+                "y": 0,
+                "z": -1
+            },
+            "position": {
+                "x": -1297.97,
+                "y": 126.779,
+                "z": -721.953
+            },
+            "id": "FiringRange_Floor_B2"
+        },
+        {
+            "name": "FiringRange_MatDecal_02",
+            "type": "FiringRange_MatDecal_02",
+            "right": {
+                "x": 20.1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 2
+            },
+            "position": {
+                "x": -1318.76,
+                "y": 112.75,
+                "z": -751.5
+            },
+            "id": "FiringRange_MatDecal_02"
+        },
+        {
+            "name": "FiringRange_MatDecal_03",
+            "type": "FiringRange_MatDecal_02",
+            "right": {
+                "x": 20.15,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 2
+            },
+            "position": {
+                "x": -1318.74,
+                "y": 112.75,
+                "z": -726
+            },
+            "id": "FiringRange_MatDecal_03"
+        },
+        {
+            "name": "FiringRange_MatDecal_04",
+            "type": "FiringRange_MatDecal_02",
+            "right": {
+                "x": -8.74228e-07,
+                "y": 0,
+                "z": 20
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -2,
+                "y": 0,
+                "z": -8.74228e-08
+            },
+            "position": {
+                "x": -1331.5,
+                "y": 112.75,
+                "z": -738.839
+            },
+            "id": "FiringRange_MatDecal_04"
+        },
+        {
+            "name": "FiringRange_MatDecal_05",
+            "type": "FiringRange_MatDecal_02",
+            "right": {
+                "x": -8.74228e-07,
+                "y": 0,
+                "z": 20
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -2,
+                "y": 0,
+                "z": -8.74228e-08
+            },
+            "position": {
+                "x": -1306,
+                "y": 112.75,
+                "z": -738.792
+            },
+            "id": "FiringRange_MatDecal_05"
+        },
+        {
+            "name": "ScaffoldingStairs_01_A_256",
+            "type": "ScaffoldingStairs_01_A_256",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -1322.24,
+                "y": 113.999,
+                "z": -720.957
+            },
+            "id": "ScaffoldingStairs_01_A_256"
+        },
+        {
+            "name": "ScaffoldingStairs_01_A_257",
+            "type": "ScaffoldingStairs_01_A_256",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -1318.37,
+                "y": 116.559,
+                "z": -720.957
+            },
+            "id": "ScaffoldingStairs_01_A_257"
+        },
+        {
+            "name": "ScaffoldingStairs_01_A_258",
+            "type": "ScaffoldingStairs_01_A_256",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -1314.52,
+                "y": 119.12,
+                "z": -720.957
+            },
+            "id": "ScaffoldingStairs_01_A_258"
+        },
+        {
+            "name": "ScaffoldingStairs_01_A_259",
+            "type": "ScaffoldingStairs_01_A_256",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -1310.69,
+                "y": 121.67,
+                "z": -720.957
+            },
+            "id": "ScaffoldingStairs_01_A_259"
+        },
+        {
+            "name": "ScaffoldingStairs_01_A_260",
+            "type": "ScaffoldingStairs_01_A_256",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -1306.88,
+                "y": 124.224,
+                "z": -720.957
+            },
+            "id": "ScaffoldingStairs_01_A_260"
+        },
+        {
+            "name": "MetalFence_02_1024",
+            "type": "MetalFence_02_1024",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -1338.56,
+                "y": 112.525,
+                "z": -760.565
+            },
+            "id": "MetalFence_02_1024"
+        },
+        {
+            "name": "MetalFence_02_1025",
+            "type": "MetalFence_02_1024",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -1328.56,
+                "y": 112.525,
+                "z": -760.565
+            },
+            "id": "MetalFence_02_1025"
+        },
+        {
+            "name": "MetalFence_02_1026",
+            "type": "MetalFence_02_1024",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -1318.56,
+                "y": 112.525,
+                "z": -760.565
+            },
+            "id": "MetalFence_02_1026"
+        },
+        {
+            "name": "MetalFence_02_1027",
+            "type": "MetalFence_02_1024",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -1308.56,
+                "y": 112.525,
+                "z": -760.565
+            },
+            "id": "MetalFence_02_1027"
+        },
+        {
+            "name": "MetalFence_02_1033",
+            "type": "MetalFence_02_1024",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -1338.56,
+                "y": 112.525,
+                "z": -702.065
+            },
+            "id": "MetalFence_02_1033"
+        },
+        {
+            "name": "MetalFence_02_1034",
+            "type": "MetalFence_02_1024",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -1328.56,
+                "y": 112.525,
+                "z": -702.065
+            },
+            "id": "MetalFence_02_1034"
+        },
+        {
+            "name": "MetalFence_02_1035",
+            "type": "MetalFence_02_1024",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -1318.56,
+                "y": 112.525,
+                "z": -702.065
+            },
+            "id": "MetalFence_02_1035"
+        },
+        {
+            "name": "MetalFence_02_1036",
+            "type": "MetalFence_02_1024",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -1308.56,
+                "y": 112.525,
+                "z": -702.065
+            },
+            "id": "MetalFence_02_1036"
+        },
+        {
+            "name": "MetalFence_02_1028",
+            "type": "MetalFence_02_1024",
+            "right": {
+                "x": -4.37114e-08,
+                "y": 0,
+                "z": 1
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -1,
+                "y": 0,
+                "z": -4.37114e-08
+            },
+            "position": {
+                "x": -1297.1,
+                "y": 112.525,
+                "z": -758.461
+            },
+            "id": "MetalFence_02_1028"
+        },
+        {
+            "name": "MetalFence_02_1029",
+            "type": "MetalFence_02_1024",
+            "right": {
+                "x": -4.37114e-08,
+                "y": 0,
+                "z": 1
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -1,
+                "y": 0,
+                "z": -4.37114e-08
+            },
+            "position": {
+                "x": -1297.1,
+                "y": 112.525,
+                "z": -748.461
+            },
+            "id": "MetalFence_02_1029"
+        },
+        {
+            "name": "MetalFence_02_1030",
+            "type": "MetalFence_02_1024",
+            "right": {
+                "x": -4.37114e-08,
+                "y": 0,
+                "z": 1
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -1,
+                "y": 0,
+                "z": -4.37114e-08
+            },
+            "position": {
+                "x": -1297.1,
+                "y": 112.525,
+                "z": -738.461
+            },
+            "id": "MetalFence_02_1030"
+        },
+        {
+            "name": "MetalFence_02_1031",
+            "type": "MetalFence_02_1024",
+            "right": {
+                "x": -4.37114e-08,
+                "y": 0,
+                "z": 1
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -1,
+                "y": 0,
+                "z": -4.37114e-08
+            },
+            "position": {
+                "x": -1297.1,
+                "y": 112.525,
+                "z": -728.461
+            },
+            "id": "MetalFence_02_1031"
+        },
+        {
+            "name": "MetalFence_02_1032",
+            "type": "MetalFence_02_1024",
+            "right": {
+                "x": -4.37114e-08,
+                "y": 0,
+                "z": 1
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -1,
+                "y": 0,
+                "z": -4.37114e-08
+            },
+            "position": {
+                "x": -1297.1,
+                "y": 112.525,
+                "z": -717.961
+            },
+            "id": "MetalFence_02_1032"
+        },
+        {
+            "name": "MetalFence_02_1037",
+            "type": "MetalFence_02_1024",
+            "right": {
+                "x": -4.37114e-08,
+                "y": 0,
+                "z": 1
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -1,
+                "y": 0,
+                "z": -4.37114e-08
+            },
+            "position": {
+                "x": -1338.6,
+                "y": 112.525,
+                "z": -758.461
+            },
+            "id": "MetalFence_02_1037"
+        },
+        {
+            "name": "MetalFence_02_1038",
+            "type": "MetalFence_02_1024",
+            "right": {
+                "x": -4.37114e-08,
+                "y": 0,
+                "z": 1
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -1,
+                "y": 0,
+                "z": -4.37114e-08
+            },
+            "position": {
+                "x": -1338.6,
+                "y": 112.525,
+                "z": -748.461
+            },
+            "id": "MetalFence_02_1038"
+        },
+        {
+            "name": "MetalFence_02_1039",
+            "type": "MetalFence_02_1024",
+            "right": {
+                "x": -4.37114e-08,
+                "y": 0,
+                "z": 1
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -1,
+                "y": 0,
+                "z": -4.37114e-08
+            },
+            "position": {
+                "x": -1338.6,
+                "y": 112.525,
+                "z": -738.461
+            },
+            "id": "MetalFence_02_1039"
+        },
+        {
+            "name": "MetalFence_02_1040",
+            "type": "MetalFence_02_1024",
+            "right": {
+                "x": -4.37114e-08,
+                "y": 0,
+                "z": 1
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -1,
+                "y": 0,
+                "z": -4.37114e-08
+            },
+            "position": {
+                "x": -1338.6,
+                "y": 112.525,
+                "z": -728.461
+            },
+            "id": "MetalFence_02_1040"
+        },
+        {
+            "name": "MetalFence_02_1041",
+            "type": "MetalFence_02_1024",
+            "right": {
+                "x": -4.37114e-08,
+                "y": 0,
+                "z": 1
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -1,
+                "y": 0,
+                "z": -4.37114e-08
+            },
+            "position": {
+                "x": -1338.6,
+                "y": 112.525,
+                "z": -717.961
+            },
+            "id": "MetalFence_02_1041"
+        },
+        {
+            "name": "MetalFence_02_256",
+            "type": "MetalFence_02_256",
+            "right": {
+                "x": 0.707107,
+                "y": 0,
+                "z": 0.707107
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.707107,
+                "y": 0,
+                "z": 0.707107
+            },
+            "position": {
+                "x": -1298.83,
+                "y": 112.525,
+                "z": -760.485
+            },
+            "id": "MetalFence_02_256"
+        },
+        {
+            "name": "MetalFence_02_257",
+            "type": "MetalFence_02_256",
+            "right": {
+                "x": -0.258819,
+                "y": 0,
+                "z": 0.965926
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.965926,
+                "y": 0,
+                "z": -0.258819
+            },
+            "position": {
+                "x": -1338.11,
+                "y": 112.525,
+                "z": -760.807
+            },
+            "id": "MetalFence_02_257"
+        },
+        {
+            "name": "MetalFence_02_512",
+            "type": "MetalFence_02_512",
+            "right": {
+                "x": 2.98023e-08,
+                "y": 0,
+                "z": 1
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -1,
+                "y": 0,
+                "z": 2.98023e-08
+            },
+            "position": {
+                "x": -1338.61,
+                "y": 112.525,
+                "z": -707.559
+            },
+            "id": "MetalFence_02_512"
+        },
+        {
+            "name": "MetalFence_02_513",
+            "type": "MetalFence_02_512",
+            "right": {
+                "x": -0.170141,
+                "y": 0,
+                "z": 0.98542
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.98542,
+                "y": 0,
+                "z": -0.170141
+            },
+            "position": {
+                "x": -1297.12,
+                "y": 112.525,
+                "z": -707.427
+            },
+            "id": "MetalFence_02_513"
+        },
+        {
+            "name": "MetalFence_02_1042",
+            "type": "MetalFence_02_1024",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -1337.92,
+                "y": 126.528,
+                "z": -719.169
+            },
+            "id": "MetalFence_02_1042"
+        },
+        {
+            "name": "MetalFence_02_1047",
+            "type": "MetalFence_02_1024",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -1337.92,
+                "y": 127.028,
+                "z": -708.833
+            },
+            "id": "MetalFence_02_1047"
+        },
+        {
+            "name": "MetalFence_02_1048",
+            "type": "MetalFence_02_1024",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -1327.92,
+                "y": 127.028,
+                "z": -708.833
+            },
+            "id": "MetalFence_02_1048"
+        },
+        {
+            "name": "MetalFence_02_1049",
+            "type": "MetalFence_02_1024",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -1317.92,
+                "y": 127.028,
+                "z": -708.833
+            },
+            "id": "MetalFence_02_1049"
+        },
+        {
+            "name": "MetalFence_02_1050",
+            "type": "MetalFence_02_1024",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -1308.42,
+                "y": 127.028,
+                "z": -708.833
+            },
+            "id": "MetalFence_02_1050"
+        },
+        {
+            "name": "MetalFence_02_1043",
+            "type": "MetalFence_02_1024",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -1328.07,
+                "y": 126.528,
+                "z": -719.169
+            },
+            "id": "MetalFence_02_1043"
+        },
+        {
+            "name": "MetalFence_02_1044",
+            "type": "MetalFence_02_1024",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -1313.36,
+                "y": 126.528,
+                "z": -719.169
+            },
+            "id": "MetalFence_02_1044"
+        },
+        {
+            "name": "MetalFence_02_1045",
+            "type": "MetalFence_02_1024",
+            "right": {
+                "x": -4.37114e-08,
+                "y": 0,
+                "z": 1
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -1,
+                "y": 0,
+                "z": -4.37114e-08
+            },
+            "position": {
+                "x": -1298.15,
+                "y": 127.028,
+                "z": -721.635
+            },
+            "id": "MetalFence_02_1045"
+        },
+        {
+            "name": "MetalFence_02_1046",
+            "type": "MetalFence_02_1024",
+            "right": {
+                "x": -4.37114e-08,
+                "y": 0,
+                "z": 1
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -1,
+                "y": 0,
+                "z": -4.37114e-08
+            },
+            "position": {
+                "x": -1337.89,
+                "y": 127.028,
+                "z": -718.88
+            },
+            "id": "MetalFence_02_1046"
+        },
+        {
+            "name": "MetalFence_02_258",
+            "type": "MetalFence_02_256",
+            "right": {
+                "x": 0.916086,
+                "y": 0,
+                "z": -0.400981
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.400981,
+                "y": 0,
+                "z": 0.916086
+            },
+            "position": {
+                "x": -1303.18,
+                "y": 127.028,
+                "z": -720.782
+            },
+            "id": "MetalFence_02_258"
+        },
+        {
+            "name": "MetalFence_02_259",
+            "type": "MetalFence_02_256",
+            "right": {
+                "x": 0.999992,
+                "y": 0,
+                "z": -0.0039011
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.0039011,
+                "y": 0,
+                "z": 0.999992
+            },
+            "position": {
+                "x": -1300.69,
+                "y": 127.028,
+                "z": -721.802
+            },
+            "id": "MetalFence_02_259"
+        },
+        {
+            "name": "MetalFence_02_260",
+            "type": "MetalFence_02_256",
+            "right": {
+                "x": -4.37114e-08,
+                "y": 0,
+                "z": -1
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 1,
+                "y": 0,
+                "z": -4.37114e-08
+            },
+            "position": {
+                "x": -1298.14,
+                "y": 127.028,
+                "z": -708.842
+            },
+            "id": "MetalFence_02_260"
+        },
+        {
+            "name": "FiringRange_MatDecal_06",
+            "type": "FiringRange_MatDecal_02",
+            "right": {
+                "x": -2.09814e-08,
+                "y": 0,
+                "z": 0.48
+            },
+            "up": {
+                "x": 0,
+                "y": 0.8,
+                "z": 0
+            },
+            "front": {
+                "x": -1.6,
+                "y": 0,
+                "z": -6.99382e-08
+            },
+            "position": {
+                "x": -1315.87,
+                "y": 127,
+                "z": -718.3
+            },
+            "id": "FiringRange_MatDecal_06"
+        },
+        {
+            "name": "FiringRange_MatDecal_07",
+            "type": "FiringRange_MatDecal_02",
+            "right": {
+                "x": -0.282842,
+                "y": 0,
+                "z": 0.282842
+            },
+            "up": {
+                "x": 0,
+                "y": 0.8,
+                "z": 0
+            },
+            "front": {
+                "x": -0.848528,
+                "y": 0,
+                "z": -0.848528
+            },
+            "position": {
+                "x": -1315.99,
+                "y": 127,
+                "z": -718.575
+            },
+            "id": "FiringRange_MatDecal_07"
+        },
+        {
+            "name": "FiringRange_MatDecal_08",
+            "type": "FiringRange_MatDecal_02",
+            "right": {
+                "x": 0.282842,
+                "y": 0,
+                "z": 0.282842
+            },
+            "up": {
+                "x": 0,
+                "y": 0.8,
+                "z": 0
+            },
+            "front": {
+                "x": -0.848528,
+                "y": 0,
+                "z": 0.848528
+            },
+            "position": {
+                "x": -1315.76,
+                "y": 127,
+                "z": -718.571
+            },
+            "id": "FiringRange_MatDecal_08"
+        },
+        {
+            "name": "Desk_Wooden_01",
+            "type": "Desk_Wooden_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -1312.05,
+                "y": 126.971,
+                "z": -718.643
+            },
+            "id": "Desk_Wooden_01"
+        },
+        {
+            "name": "InteractPoint",
+            "type": "InteractPoint",
+            "ObjId": 50,
+            "right": {
+                "x": 0.8,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 0.8,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 0.8
+            },
+            "position": {
+                "x": -1312.04401855,
+                "y": 127.734947,
+                "z": -718.447077
+            },
+            "id": "Desk_Wooden_01/InteractPoint"
+        },
+        {
+            "name": "PCBox_01",
+            "type": "PCBox_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -1311.698315,
+                "y": 127.121551,
+                "z": -718.6280464
+            },
+            "id": "Desk_Wooden_01/PCBox_01"
+        },
+        {
+            "name": "ComputerMouseKeyboard_01",
+            "type": "ComputerMouseKeyboard_01",
+            "right": {
+                "x": -1,
+                "y": 0,
+                "z": 8.74228e-08
+            },
+            "up": {
+                "x": 8.55071e-09,
+                "y": 0.995205,
+                "z": 0.0978087
+            },
+            "front": {
+                "x": -8.70036e-08,
+                "y": 0.0978087,
+                "z": -0.995205
+            },
+            "position": {
+                "x": -1311.893262,
+                "y": 127.750999,
+                "z": -718.46789
+            },
+            "id": "Desk_Wooden_01/ComputerMouseKeyboard_01"
+        },
+        {
+            "name": "ComputerMonitor_01",
+            "type": "ComputerMonitor_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -1311.9983643,
+                "y": 127.699241,
+                "z": -718.862055
+            },
+            "id": "Desk_Wooden_01/ComputerMonitor_01"
+        },
+        {
+            "name": "DeskLamp_Spot_01",
+            "type": "DeskLamp_Spot_01",
+            "right": {
+                "x": -0.832555,
+                "y": 0.0856148,
+                "z": 0.547286
+            },
+            "up": {
+                "x": 0.0042321,
+                "y": 0.988938,
+                "z": -0.148267
+            },
+            "front": {
+                "x": -0.553926,
+                "y": -0.121124,
+                "z": -0.823708
+            },
+            "position": {
+                "x": -1312.6,
+                "y": 127.725,
+                "z": -718.789
+            },
+            "id": "DeskLamp_Spot_01"
+        },
+        {
+            "name": "AreaTrigger",
+            "type": "AreaTrigger",
+            "ObjId": 40,
+            "metadata/_custom_type_script": "uid://df5f3fjymj1x8",
+            "Area": "AreaTrigger/PolygonVolume",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "id": "AreaTrigger",
+            "linked": [
+                "Area"
+            ]
+        },
+        {
+            "name": "PolygonVolume",
+            "type": "PolygonVolume",
+            "metadata/_custom_type_script": "uid://ck5uniw0pl6u8",
+            "color": [
+                0,
+                0.6,
+                0.7,
+                0.42
+            ],
+            "id": "AreaTrigger/PolygonVolume",
+            "height": 10,
+            "points": [
+                {
+                    "x": -1332.2595,
+                    "y": 109.299,
+                    "z": -752.3295
+                },
+                {
+                    "x": -1332.2595,
+                    "y": 109.299,
+                    "z": -725.0982
+                },
+                {
+                    "x": -1305.2762,
+                    "y": 109.299,
+                    "z": -725.1602
+                },
+                {
+                    "x": -1305.2762,
+                    "y": 109.299,
+                    "z": -752.2054
+                }
+            ]
+        }
+    ],
+    "Static": [
+        {
+            "name": "MP_Granite_Marina_Portal_Terrain",
+            "metadata/_edit_lock_": true,
+            "type": "MP_Granite_Marina_Portal_Terrain",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "id": "Static/MP_Granite_Marina_Portal_Terrain"
+        },
+        {
+            "name": "MP_Granite_Marina_Portal_Assets",
+            "metadata/_edit_lock_": true,
+            "type": "MP_Granite_Marina_Portal_Assets",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "id": "Static/MP_Granite_Marina_Portal_Assets"
+        }
+    ]
+}
