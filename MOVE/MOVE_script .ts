@@ -97,11 +97,11 @@ OngoingPlayer_02_Action(eventInfo);
 
 // global vars
 const dyGlobalVar = mod.GlobalVariable(0);
-//const ppoGlobalVar = mod.GlobalVariable(1);
-//const fxGlobalVar = mod.GlobalVariable(2);
-//const fyGlobalVar = mod.GlobalVariable(3);
-//const fzGlobalVar = mod.GlobalVariable(4);
-//const PlayerCAMGlobalVar = mod.GlobalVariable(5);
+const ppoGlobalVar = mod.GlobalVariable(1);
+const fxGlobalVar = mod.GlobalVariable(2);
+const fyGlobalVar = mod.GlobalVariable(3);
+const fzGlobalVar = mod.GlobalVariable(4);
+const PlayerCAMGlobalVar = mod.GlobalVariable(5);
 
 // player vars
 const yawPlayerVar = 0;
