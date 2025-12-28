@@ -11,7 +11,7 @@ async function OnPlayerDeployed_01_Action(eventInfo: any) {
  mod.AddUIText("YAWPIT",mod.CreateVector(200,20,0),mod.CreateVector(300,40,0),mod.UIAnchor.BottomCenter,mod.Message(" "),eventInfo.eventPlayer)
  mod.DisplayCustomNotificationMessage(mod.Message("START"),mod.CustomNotificationSlots.HeaderText,5,eventInfo.eventPlayer)
  while (mod.GetSoldierState(eventInfo.eventPlayer,mod.SoldierStateBool.IsAlive)) {
-  mod.SetVariable(mod.ObjectVariable(eventInfo.eventPlayer,yawPlayerVar),mod.WorldVectorOf(mod.ForwardVector(),eventInfo.eventPlayer))
+  mod.SetVariable(mod.ObjectVariable(eventInfo.eventPlayer,pitchPlayerVar),mod.WorldVectorOf(mod.ForwardVector(),eventInfo.eventPlayer))
   if (mod.GreaterThanEqualTo(
 mod.XComponentOf(mod.GetVariable(mod.ObjectVariable(eventInfo.eventPlayer,yawPlayerVar))),
 0)) {
@@ -21,7 +21,7 @@ mod.XComponentOf(mod.GetVariable(mod.ObjectVariable(eventInfo.eventPlayer,yawPla
 360,
 mod.AngleBetweenVectors(mod.BackwardVector(),mod.Normalize(mod.CreateVector(mod.XComponentOf(mod.GetVariable(mod.ObjectVariable(eventInfo.eventPlayer,yawPlayerVar))),0,mod.ZComponentOf(mod.GetVariable(mod.ObjectVariable(eventInfo.eventPlayer,yawPlayerVar)))))))))
   }
-  mod.SetVariable(mod.ObjectVariable(eventInfo.eventPlayer,yawPlayerVar),mod.ArccosineInRadians(mod.YComponentOf(mod.WorldVectorOf(mod.ForwardVector(),eventInfo.eventPlayer))))
+  mod.SetVariable(mod.ObjectVariable(eventInfo.eventPlayer,pitchPlayerVar),mod.ArccosineInRadians(mod.YComponentOf(mod.WorldVectorOf(mod.ForwardVector(),eventInfo.eventPlayer))))
   mod.SetUITextLabel(mod.FindUIWidgetWithName("XYZ"),mod.Message("x:  {}   y:  {}   z:  {}",mod.Divide(
 mod.RoundToInteger(mod.Multiply(mod.XComponentOf(mod.GetSoldierState(eventInfo.eventPlayer,mod.SoldierStateVector.GetPosition)),100)),
 100),mod.Divide(
@@ -32,7 +32,7 @@ mod.RoundToInteger(mod.Multiply(mod.ZComponentOf(mod.GetSoldierState(eventInfo.e
   mod.SetUITextLabel(mod.FindUIWidgetWithName("YAWPIT"),mod.Message("Yaw:  {}   Pitch:  {}",mod.Divide(
 mod.RoundToInteger(mod.Multiply(mod.GetVariable(mod.ObjectVariable(eventInfo.eventPlayer,yawPlayerVar)),100)),
 100),mod.Divide(
-mod.RoundToInteger(mod.Multiply(mod.GetVariable(mod.ObjectVariable(eventInfo.eventPlayer,yawPlayerVar)),100)),
+mod.RoundToInteger(mod.Multiply(mod.GetVariable(mod.ObjectVariable(eventInfo.eventPlayer,pitchPlayerVar)),100)),
 100)))
   await mod.Wait(0.02)
  }
@@ -97,15 +97,15 @@ OngoingPlayer_02_Action(eventInfo);
 
 // global vars
 const dyGlobalVar = mod.GlobalVariable(0);
-const ppoGlobalVar = mod.GlobalVariable(1);
-const fyGlobalVar = mod.GlobalVariable(3);
-const fxGlobalVar = mod.GlobalVariable(5);
-const fzGlobalVar = mod.GlobalVariable(6);
-const PlayerCAMGlobalVar = mod.GlobalVariable(8);
+//const ppoGlobalVar = mod.GlobalVariable(1);
+//const fxGlobalVar = mod.GlobalVariable(2);
+//const fyGlobalVar = mod.GlobalVariable(3);
+//const fzGlobalVar = mod.GlobalVariable(4);
+//const PlayerCAMGlobalVar = mod.GlobalVariable(5);
 
 // player vars
 const yawPlayerVar = 0;
-const pitchPlayerVar = 17;
+const pitchPlayerVar = 1;
 
 export function OnPlayerDeployed(eventPlayer: mod.Player) {
 const eventInfo = {eventPlayer};
