@@ -34,7 +34,7 @@ mod.RoundToInteger(mod.Multiply(mod.GetVariable(mod.ObjectVariable(eventInfo.eve
 100),mod.Divide(
 mod.RoundToInteger(mod.Multiply(mod.GetVariable(mod.ObjectVariable(eventInfo.eventPlayer,pitchPlayerVar)),100)),
 100)))
-  await mod.Wait(0.02)
+  await mod.Wait(0.0166)
  }
 }
 function OnPlayerDeployed_01(conditionState: any, eventInfo: any) {
@@ -62,7 +62,7 @@ mod.YComponentOf(mod.Add(
 mod.GetSoldierState(eventInfo.eventPlayer,mod.SoldierStateVector.EyePosition),
 mod.Multiply(mod.WorldVectorOf(mod.ForwardVector(),eventInfo.eventPlayer),200))),
 mod.YComponentOf(mod.GetSoldierState(eventInfo.eventPlayer,mod.SoldierStateVector.GetPosition))))
- mod.SetVariable(dyGlobalVar,mod.YComponentOf(mod.GetSoldierState(eventInfo.eventPlayer,mod.SoldierStateVector.GetPosition)))
+ mod.SetVariable(ppoGlobalVar,mod.YComponentOf(mod.GetSoldierState(eventInfo.eventPlayer,mod.SoldierStateVector.GetPosition)))
  if (mod.LessThanEqualTo(mod.ArccosineInRadians(mod.YComponentOf(mod.WorldVectorOf(mod.ForwardVector(),eventInfo.eventPlayer))),0.1)) {
   mod.SetCameraTypeForPlayer(eventInfo.eventPlayer,mod.Cameras.ThirdPerson)
   while (mod.GetSoldierState(eventInfo.eventPlayer,mod.SoldierStateBool.IsZooming)) {
@@ -76,12 +76,12 @@ mod.Multiply(mod.UpVector(),20)))
  } else {
   mod.SetCameraTypeForPlayer(eventInfo.eventPlayer,mod.Cameras.ThirdPerson)
   while (mod.GetSoldierState(eventInfo.eventPlayer,mod.SoldierStateBool.IsZooming)) {
-   mod.SetVariable(dyGlobalVar,mod.Add(
-mod.GetVariable(dyGlobalVar),
+   mod.SetVariable(ppoGlobalVar,mod.Add(
+mod.GetVariable(ppoGlobalVar),
 mod.Divide(
 mod.GetVariable(dyGlobalVar),
 20)))
-   mod.Teleport(eventInfo.eventPlayer,mod.CreateVector(mod.XComponentOf(mod.WorldPositionOf(mod.Multiply(mod.ForwardVector(),10),eventInfo.eventPlayer)),mod.GetVariable(dyGlobalVar),mod.ZComponentOf(mod.WorldPositionOf(mod.Multiply(mod.ForwardVector(),10),eventInfo.eventPlayer))),mod.GetVariable(mod.ObjectVariable(eventInfo.eventPlayer,yawPlayerVar)))
+   mod.Teleport(eventInfo.eventPlayer,mod.CreateVector(mod.XComponentOf(mod.WorldPositionOf(mod.Multiply(mod.ForwardVector(),10),eventInfo.eventPlayer)),mod.GetVariable(ppoGlobalVar),mod.ZComponentOf(mod.WorldPositionOf(mod.Multiply(mod.ForwardVector(),10),eventInfo.eventPlayer))),mod.GetVariable(mod.ObjectVariable(eventInfo.eventPlayer,yawPlayerVar)))
    await mod.Wait(0.1)
   }
   mod.SetCameraTypeForPlayer(eventInfo.eventPlayer,mod.Cameras.FirstPerson)
@@ -96,13 +96,11 @@ OngoingPlayer_02_Action(eventInfo);
 }
 
 // global vars
-const dyGlobalVar = mod.GlobalVariable(0);
-const ppoGlobalVar = mod.GlobalVariable(1);
-
+const dyGlobalVar = mod.GlobalVariable(0)
+const ppoGlobalVar = mod.GlobalVariable(1)
 // player vars
 const yawPlayerVar = 0;
 const pitchPlayerVar = 1;
-
 
 // team vars
 
