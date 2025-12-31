@@ -1,27 +1,35 @@
 
 import * as modlib from 'modlib';
 
-function OnPlayerDeployed_01_Condition(eventInfo: any): boolean {
-  const newState = mod.Not(mod.GetSoldierState(eventInfo.eventPlayer,mod.SoldierStateBool.IsAISoldier));
+function OngoingPlayer_01_Condition(eventInfo: any): boolean {
+  const newState =  mod.And(
+    mod.Not(mod.GetSoldierState(eventInfo.eventPlayer, mod.SoldierStateBool.IsAISoldier)),
+    mod.GetSoldierState(eventInfo.eventPlayer, mod.SoldierStateBool.IsAlive));
  return newState;
 }
 
-async function OnPlayerDeployed_01_Action(eventInfo: any) {
- mod.AddUIText("XYZ",mod.CreateVector(200,60,0),mod.CreateVector(400,40,0),mod.UIAnchor.BottomCenter,mod.Message(" "),eventInfo.eventPlayer)
- mod.AddUIText("YAWPIT",mod.CreateVector(200,20,0),mod.CreateVector(300,40,0),mod.UIAnchor.BottomCenter,mod.Message(" "),eventInfo.eventPlayer)
- mod.DisplayCustomNotificationMessage(mod.Message("START"),mod.CustomNotificationSlots.HeaderText,5,eventInfo.eventPlayer)
- while (mod.GetSoldierState(eventInfo.eventPlayer,mod.SoldierStateBool.IsAlive)) {
-  mod.SetVariable(mod.ObjectVariable(eventInfo.eventPlayer,yawPlayerVar),mod.WorldVectorOf(mod.ForwardVector(),eventInfo.eventPlayer))
+async function OngoingPlayer_01_Action(eventInfo: any) {
+ mod.AddUIText("XYZ",mod.CreateVector(200,60,0),mod.CreateVector(400,40,0),mod.UIAnchor.BottomCenter,mod.Message(" "),eventInfo.eventPlayer);
+ mod.AddUIText("YAWPIT",mod.CreateVector(200,20,0),mod.CreateVector(300,40,0),mod.UIAnchor.BottomCenter,mod.Message(" "),eventInfo.eventPlayer);
+ while (true) {
+  mod.SetVariable(mod.ObjectVariable(eventInfo.eventPlayer,yawPlayerVar),mod.WorldVectorOf(mod.ForwardVector(),eventInfo.eventPlayer));
   if (mod.GreaterThanEqualTo(
 mod.XComponentOf(mod.GetVariable(mod.ObjectVariable(eventInfo.eventPlayer,yawPlayerVar))),
 0)) {
-   mod.SetVariable(mod.ObjectVariable(eventInfo.eventPlayer,yawPlayerVar),mod.DegreesToRadians(mod.AngleBetweenVectors(mod.BackwardVector(),mod.Normalize(mod.CreateVector(mod.XComponentOf(mod.GetVariable(mod.ObjectVariable(eventInfo.eventPlayer,yawPlayerVar))),0,mod.ZComponentOf(mod.GetVariable(mod.ObjectVariable(eventInfo.eventPlayer,yawPlayerVar))))))))
+   mod.SetVariable(mod.ObjectVariable(eventInfo.eventPlayer,yawPlayerVar),
+   mod.DegreesToRadians(mod.AngleBetweenVectors(mod.BackwardVector(),mod.Normalize(mod.CreateVector(
+    mod.XComponentOf(mod.GetVariable(mod.ObjectVariable(eventInfo.eventPlayer,yawPlayerVar))),
+    0,
+   mod.ZComponentOf(mod.GetVariable(mod.ObjectVariable(eventInfo.eventPlayer,yawPlayerVar))))))))
   } else {
    mod.SetVariable(mod.ObjectVariable(eventInfo.eventPlayer,yawPlayerVar),mod.DegreesToRadians(mod.Subtract(
 360,
-mod.AngleBetweenVectors(mod.BackwardVector(),mod.Normalize(mod.CreateVector(mod.XComponentOf(mod.GetVariable(mod.ObjectVariable(eventInfo.eventPlayer,yawPlayerVar))),0,mod.ZComponentOf(mod.GetVariable(mod.ObjectVariable(eventInfo.eventPlayer,yawPlayerVar)))))))))
+mod.AngleBetweenVectors(mod.BackwardVector(),mod.Normalize(mod.CreateVector(
+  mod.XComponentOf(mod.GetVariable(mod.ObjectVariable(eventInfo.eventPlayer,yawPlayerVar))),0,
+  mod.ZComponentOf(mod.GetVariable(mod.ObjectVariable(eventInfo.eventPlayer,yawPlayerVar)))))))))
   }
-  mod.SetVariable(mod.ObjectVariable(eventInfo.eventPlayer,pitchPlayerVar),mod.ArccosineInRadians(mod.YComponentOf(mod.WorldVectorOf(mod.ForwardVector(),eventInfo.eventPlayer))))
+  mod.SetVariable(mod.ObjectVariable(eventInfo.eventPlayer,pitchPlayerVar),
+  mod.ArccosineInRadians(mod.YComponentOf(mod.WorldVectorOf(mod.ForwardVector(),eventInfo.eventPlayer))))
   mod.SetUITextLabel(mod.FindUIWidgetWithName("XYZ"),mod.Message("x:  {}   y:  {}   z:  {}",mod.Divide(
 mod.RoundToInteger(mod.Multiply(mod.XComponentOf(mod.GetSoldierState(eventInfo.eventPlayer,mod.SoldierStateVector.GetPosition)),100)),
 100),mod.Divide(
@@ -37,12 +45,13 @@ mod.RoundToInteger(mod.Multiply(mod.GetVariable(mod.ObjectVariable(eventInfo.eve
   await mod.Wait(0.0166)
  }
 }
-function OnPlayerDeployed_01(conditionState: any, eventInfo: any) {
-let newState = OnPlayerDeployed_01_Condition(eventInfo);
+
+function OngoingPlayer_01(conditionState: any, eventInfo: any) {
+let newState = OngoingPlayer_01_Condition(eventInfo);
 if (!conditionState.update(newState)) {
  return;
 }
-OnPlayerDeployed_01_Action(eventInfo);
+OngoingPlayer_01_Action(eventInfo);
 }
 
 function OngoingPlayer_02_Condition(eventInfo: any): boolean {
@@ -81,7 +90,9 @@ mod.GetVariable(ppoGlobalVar),
 mod.Divide(
 mod.GetVariable(dyGlobalVar),
 20)))
-   mod.Teleport(eventInfo.eventPlayer,mod.CreateVector(mod.XComponentOf(mod.WorldPositionOf(mod.Multiply(mod.ForwardVector(),10),eventInfo.eventPlayer)),mod.GetVariable(ppoGlobalVar),mod.ZComponentOf(mod.WorldPositionOf(mod.Multiply(mod.ForwardVector(),10),eventInfo.eventPlayer))),mod.GetVariable(mod.ObjectVariable(eventInfo.eventPlayer,yawPlayerVar)))
+   mod.Teleport(eventInfo.eventPlayer,mod.CreateVector(mod.XComponentOf(mod.WorldPositionOf(mod.Multiply(mod.ForwardVector(),10),
+   eventInfo.eventPlayer)),mod.GetVariable(ppoGlobalVar),mod.ZComponentOf(mod.WorldPositionOf(mod.Multiply(mod.ForwardVector(),10),
+   eventInfo.eventPlayer))),mod.GetVariable(mod.ObjectVariable(eventInfo.eventPlayer,yawPlayerVar)))
    await mod.Wait(0.1)
   }
   mod.SetCameraTypeForPlayer(eventInfo.eventPlayer,mod.Cameras.FirstPerson)
@@ -96,24 +107,18 @@ OngoingPlayer_02_Action(eventInfo);
 }
 
 // global vars
-const dyGlobalVar = mod.GlobalVariable(0)
-const ppoGlobalVar = mod.GlobalVariable(1)
+const dyGlobalVar = mod.GlobalVariable(0);
+const ppoGlobalVar = mod.GlobalVariable(1);
 // player vars
 const yawPlayerVar = 0;
 const pitchPlayerVar = 1;
 
-// team vars
 
-// capture point vars
-
-// mcom vars
-
-// vehicle vars
 
 export function OnPlayerDeployed(eventPlayer: mod.Player) {
 const eventInfo = {eventPlayer};
 let eventNum = 0;
-  OnPlayerDeployed_01(modlib.getPlayerCondition(eventPlayer, eventNum++), eventInfo);
+  OngoingPlayer_01(modlib.getPlayerCondition(eventPlayer, eventNum++), eventInfo);
 }
 
 export function OngoingPlayer(eventPlayer: mod.Player) {
