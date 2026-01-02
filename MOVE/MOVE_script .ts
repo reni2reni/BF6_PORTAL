@@ -66,32 +66,32 @@ return newState;
 }
 
 async function OngoingPlayer_02_Action(eventInfo: any) {
- mod.SetVariable(dyGlobalVar,mod.Subtract(
+ mod.SetVariable(mod.ObjectVariable(eventInfo.eventPlayer,dyPlayerVar),mod.Subtract(
 mod.YComponentOf(mod.Add(
 mod.GetSoldierState(eventInfo.eventPlayer,mod.SoldierStateVector.EyePosition),
 mod.Multiply(mod.WorldVectorOf(mod.ForwardVector(),eventInfo.eventPlayer),200))),
 mod.YComponentOf(mod.GetSoldierState(eventInfo.eventPlayer,mod.SoldierStateVector.GetPosition))))
- mod.SetVariable(ppoGlobalVar,mod.YComponentOf(mod.GetSoldierState(eventInfo.eventPlayer,mod.SoldierStateVector.GetPosition)))
+ mod.SetVariable(mod.ObjectVariable(eventInfo.eventPlayer,ppoPlayerVar),mod.YComponentOf(mod.GetSoldierState(eventInfo.eventPlayer,mod.SoldierStateVector.GetPosition)))
  if (mod.LessThanEqualTo(mod.ArccosineInRadians(mod.YComponentOf(mod.WorldVectorOf(mod.ForwardVector(),eventInfo.eventPlayer))),0.1)) {
   mod.SetCameraTypeForPlayer(eventInfo.eventPlayer,mod.Cameras.ThirdPerson)
   while (mod.GetSoldierState(eventInfo.eventPlayer,mod.SoldierStateBool.IsZooming)) {
-   mod.SetVariable(dyGlobalVar,mod.Add(
+   mod.SetVariable(mod.ObjectVariable(eventInfo.eventPlayer,dyPlayerVar),mod.Add(
 mod.GetSoldierState(eventInfo.eventPlayer,mod.SoldierStateVector.GetPosition),
 mod.Multiply(mod.UpVector(),20)))
-   mod.Teleport(eventInfo.eventPlayer,mod.GetVariable(dyGlobalVar),mod.GetVariable(mod.ObjectVariable(eventInfo.eventPlayer,yawPlayerVar)))
+   mod.Teleport(eventInfo.eventPlayer,mod.GetVariable(mod.ObjectVariable(eventInfo.eventPlayer,dyPlayerVar)),mod.GetVariable(mod.ObjectVariable(eventInfo.eventPlayer,yawPlayerVar)))
    await mod.Wait(0.1)
   }
   mod.SetCameraTypeForPlayer(eventInfo.eventPlayer,mod.Cameras.FirstPerson)
  } else {
   mod.SetCameraTypeForPlayer(eventInfo.eventPlayer,mod.Cameras.ThirdPerson)
   while (mod.GetSoldierState(eventInfo.eventPlayer,mod.SoldierStateBool.IsZooming)) {
-   mod.SetVariable(ppoGlobalVar,mod.Add(
-mod.GetVariable(ppoGlobalVar),
+   mod.SetVariable(mod.ObjectVariable(eventInfo.eventPlayer,ppoPlayerVar),mod.Add(
+mod.GetVariable(mod.ObjectVariable(eventInfo.eventPlayer,ppoPlayerVar)),
 mod.Divide(
-mod.GetVariable(dyGlobalVar),
+mod.GetVariable(mod.ObjectVariable(eventInfo.eventPlayer,dyPlayerVar)),
 20)))
    mod.Teleport(eventInfo.eventPlayer,mod.CreateVector(mod.XComponentOf(mod.WorldPositionOf(mod.Multiply(mod.ForwardVector(),10),
-   eventInfo.eventPlayer)),mod.GetVariable(ppoGlobalVar),mod.ZComponentOf(mod.WorldPositionOf(mod.Multiply(mod.ForwardVector(),10),
+   eventInfo.eventPlayer)),mod.GetVariable(mod.ObjectVariable(eventInfo.eventPlayer,ppoPlayerVar)),mod.ZComponentOf(mod.WorldPositionOf(mod.Multiply(mod.ForwardVector(),10),
    eventInfo.eventPlayer))),mod.GetVariable(mod.ObjectVariable(eventInfo.eventPlayer,yawPlayerVar)))
    await mod.Wait(0.1)
   }
@@ -107,11 +107,12 @@ OngoingPlayer_02_Action(eventInfo);
 }
 
 // global vars
-const dyGlobalVar = mod.GlobalVariable(0);
-const ppoGlobalVar = mod.GlobalVariable(1);
+
 // player vars
 const yawPlayerVar = 0;
 const pitchPlayerVar = 1;
+const dyPlayerVar = 2;
+const ppoPlayerVar = 3;
 
 
 
