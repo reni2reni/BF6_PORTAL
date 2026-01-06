@@ -1,0 +1,288 @@
+[gd_scene load_steps=27 format=3 uid="uid://ewfejysxdyso"]
+
+[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/HQ_PlayerSpawner.tscn" id="1_punef"]
+[ext_resource type="PackedScene" uid="uid://jv31so3xcr7p" path="res://addons/bf_portal/portal_tools/types/PolygonVolume/PolygonVolume.tscn" id="2_pxqk2"]
+[ext_resource type="PackedScene" path="res://objects/entities/SpawnPoint.tscn" id="3_r0we4"]
+[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/CombatArea.tscn" id="4_hnkcb"]
+[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/DeployCam.tscn" id="5_iwicx"]
+[ext_resource type="PackedScene" path="res://static/MP_Granite_Marina_Portal_Terrain.tscn" id="6_tbxcj"]
+[ext_resource type="PackedScene" path="res://static/MP_Granite_Marina_Portal_Assets.tscn" id="7_eyp7t"]
+[ext_resource type="PackedScene" path="res://objects/Global/Architecture/FiringRange_Floor_A.tscn" id="8_t5dgy"]
+[ext_resource type="PackedScene" path="res://objects/Shared/Generic/Common/Props/PlasterRetainingWall_01_256.tscn" id="9_punef"]
+[ext_resource type="PackedScene" path="res://objects/SouthernCalifornia/Shared/Generic/Industrial/Architecture/VAB_FoundationFloor_512_01_Boulder.tscn" id="11_r0we4"]
+[ext_resource type="PackedScene" path="res://objects/SouthernCalifornia/MP_Granite_Marina_Portal/Generic/Common/Props/ConcreteHarborWall_01_256.tscn" id="12_iwicx"]
+[ext_resource type="PackedScene" path="res://objects/Global/FX/FX_Gadget_VehicleSupplyCrate_Range_Indicator.tscn" id="13_iwicx"]
+[ext_resource type="PackedScene" path="res://objects/Global/Architecture/FiringRange_Floor_B.tscn" id="13_tbxcj"]
+[ext_resource type="PackedScene" path="res://objects/Global/Props/FiringRange_MatDecal_02.tscn" id="14_eyp7t"]
+[ext_resource type="PackedScene" path="res://objects/Shared/Generic/Industrial/Architecture/ScaffoldingStairs_01_A_256.tscn" id="15_eyp7t"]
+[ext_resource type="PackedScene" path="res://objects/SouthernCalifornia/Shared/Generic/Common/Props/MetalFence_02_1024.tscn" id="16_vv585"]
+[ext_resource type="PackedScene" path="res://objects/Shared/Generic/Common/Props/MetalFence_02_256.tscn" id="17_7n3pp"]
+[ext_resource type="PackedScene" path="res://objects/Shared/Generic/Common/Props/MetalFence_02_512.tscn" id="18_0vn3p"]
+[ext_resource type="PackedScene" path="res://objects/SouthernCalifornia/MP_Granite_Marina_Portal/Generic/Common/Props/Desk_Wooden_01.tscn" id="19_5lgm6"]
+[ext_resource type="Script" uid="uid://cpa0wyyumevnc" path="res://scripts/Gameplay/Common/InteractPoint.gd" id="20_2ly7w"]
+[ext_resource type="PackedScene" path="res://objects/Shared/Generic/Common/Props/PCBox_01.tscn" id="21_2ly7w"]
+[ext_resource type="PackedScene" path="res://objects/Shared/Generic/Common/Props/ComputerMouseKeyboard_01.tscn" id="22_dipif"]
+[ext_resource type="PackedScene" path="res://objects/Shared/Generic/Common/Props/ComputerMonitor_01.tscn" id="23_s22t7"]
+[ext_resource type="PackedScene" path="res://objects/SouthernCalifornia/MP_Granite_Marina_Portal/Generic/Common/LightFixtures/DeskLamp_Spot_01.tscn" id="24_dipif"]
+[ext_resource type="Script" uid="uid://df5f3fjymj1x8" path="res://scripts/Gameplay/Common/AreaTrigger.gd" id="25_ltut5"]
+[ext_resource type="Script" uid="uid://ck5uniw0pl6u8" path="res://addons/bf_portal/portal_tools/types/PolygonVolume/PolygonVolume.gd" id="26_712rw"]
+
+[node name="MP_Granite_Marina_Portal" type="Node3D"]
+
+[node name="TEAM_1_HQ" parent="." node_paths=PackedStringArray("HQArea", "InfantrySpawns") instance=ExtResource("1_punef")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1317.86, 115.816, -739.268)
+AltTeam = 0
+ObjId = 1
+HQArea = NodePath("HQ_Team1")
+InfantrySpawns = [NodePath("SpawnPoint_1_1"), NodePath("SpawnPoint_1_2"), null, null]
+
+[node name="HQ_Team1" parent="TEAM_1_HQ" instance=ExtResource("2_pxqk2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.21814, 7.14673, 2.18402)
+points = PackedVector2Array(5, 5, 5, -5, -5, -5, -5, 5)
+
+[node name="SpawnPoint_1_1" parent="TEAM_1_HQ" instance=ExtResource("3_r0we4")]
+transform = Transform3D(-0.999473, 0, -0.0324575, 0, 1, 0, 0.0324575, 0, -0.999473, 5.51147, 11.1788, 23.6514)
+ObjId = 5
+
+[node name="SpawnPoint_1_2" parent="TEAM_1_HQ" instance=ExtResource("3_r0we4")]
+transform = Transform3D(-0.92917, 0, 0.36965, 0, 1, 0, -0.36965, 0, -0.92917, 2.19617, 11.1788, 23.6576)
+
+[node name="TEAM_2_HQ" parent="." node_paths=PackedStringArray("HQArea", "InfantrySpawns") instance=ExtResource("1_punef")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1334.85, 112.77, -756.355)
+Team = 2
+AltTeam = 0
+ObjId = 2
+HQArea = NodePath("HQ_Team2")
+InfantrySpawns = [NodePath("SpawnPoint_2_1"), NodePath("SpawnPoint_2_2"), null, null]
+
+[node name="HQ_Team2" parent="TEAM_2_HQ" instance=ExtResource("2_pxqk2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 7.14673, 6.5)
+points = PackedVector2Array(5, 5, 5, -5, -5, -5, -5, 5)
+
+[node name="SpawnPoint_2_1" parent="TEAM_2_HQ" instance=ExtResource("3_r0we4")]
+transform = Transform3D(0.97213, 0, 0.234446, 0, 1, 0, -0.234446, 0, 0.97213, 1.26917, 0, 14.1781)
+
+[node name="SpawnPoint_2_2" parent="TEAM_2_HQ" instance=ExtResource("3_r0we4")]
+transform = Transform3D(0.869236, 0, 0.494397, 0, 1, 0, -0.494397, 0, 0.869236, 11.3043, 0, 4.50671)
+
+[node name="CombatArea" parent="." node_paths=PackedStringArray("CombatVolume") instance=ExtResource("4_hnkcb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1167.17, 20.9261, -717.832)
+CombatVolume = NodePath("CombatVolume")
+
+[node name="CombatVolume" parent="CombatArea" instance=ExtResource("2_pxqk2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -150.1, 134.381, 31.1086)
+points = PackedVector2Array(-22.4857, -14.0259, 20.7806, -14.2208, 20.7806, -73.6633, -22.0958, -74.248)
+height = 100.0
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.101056, 0.994881, 0, -0.994881, 0.101056, -1286.43, 419.438, -701.466)
+
+[node name="DeployCam" parent="Camera3D" instance=ExtResource("5_iwicx")]
+
+[node name="Static" type="Node3D" parent="."]
+
+[node name="MP_Granite_Marina_Portal_Terrain" parent="Static" instance=ExtResource("6_tbxcj")]
+metadata/_edit_lock_ = true
+
+[node name="MP_Granite_Marina_Portal_Assets" parent="Static" instance=ExtResource("7_eyp7t")]
+metadata/_edit_lock_ = true
+
+[node name="FiringRange_Floor_A" parent="." instance=ExtResource("8_t5dgy")]
+transform = Transform3D(-5.24537e-07, 0, 12, 0, 1, 0, -12, 0, -5.24537e-07, -1296.69, 112.468, -700.858)
+
+[node name="PlasterRetainingWall_01_256" parent="." instance=ExtResource("9_punef")]
+transform = Transform3D(13, 0, 3.69482e-14, 0, 13, 0, -3.69482e-14, 0, 13, -1335.06, 89.3166, -718.997)
+
+[node name="VAB_FoundationFloor_512_01_Boulder2" parent="." instance=ExtResource("11_r0we4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1238.39, 110.636, -836.185)
+
+[node name="ConcreteHarborWall_01_256" parent="." instance=ExtResource("12_iwicx")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -1336.7, 112.468, -719.298)
+
+[node name="ConcreteHarborWall_01_258" parent="." instance=ExtResource("12_iwicx")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -1324.2, 112.468, -719.298)
+
+[node name="ConcreteHarborWall_01_257" parent="." instance=ExtResource("12_iwicx")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -1311.7, 112.468, -719.298)
+
+[node name="FX_Gadget_VehicleSupplyCrate_Range_Indicator" parent="." instance=ExtResource("13_iwicx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1318.2, 112.782, -736.704)
+ObjId = 20
+
+[node name="FiringRange_Floor_B" parent="." instance=ExtResource("13_tbxcj")]
+transform = Transform3D(-8, 0, 4.52987e-07, 0, 2.5, 0, -1.20797e-06, 0, -3, -1298, 126.971, -719.286)
+
+[node name="FiringRange_Floor_B2" parent="." instance=ExtResource("13_tbxcj")]
+transform = Transform3D(-1, 0, 1.50996e-07, 0, 1, 0, -1.50996e-07, 0, -1, -1297.97, 126.779, -721.953)
+
+[node name="FiringRange_MatDecal_02" parent="." instance=ExtResource("14_eyp7t")]
+transform = Transform3D(20.1, 0, 0, 0, 1, 0, 0, 0, 2, -1318.76, 112.75, -751.5)
+
+[node name="FiringRange_MatDecal_03" parent="." instance=ExtResource("14_eyp7t")]
+transform = Transform3D(20.15, 0, 0, 0, 1, 0, 0, 0, 2, -1318.74, 112.75, -726)
+
+[node name="FiringRange_MatDecal_04" parent="." instance=ExtResource("14_eyp7t")]
+transform = Transform3D(-8.74228e-07, 0, -2, 0, 1, 0, 20, 0, -8.74228e-08, -1331.5, 112.75, -738.839)
+
+[node name="FiringRange_MatDecal_05" parent="." instance=ExtResource("14_eyp7t")]
+transform = Transform3D(-8.74228e-07, 0, -2, 0, 1, 0, 20, 0, -8.74228e-08, -1306, 112.75, -738.792)
+
+[node name="ScaffoldingStairs_01_A_256" parent="." instance=ExtResource("15_eyp7t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1322.24, 113.999, -720.957)
+
+[node name="ScaffoldingStairs_01_A_257" parent="." instance=ExtResource("15_eyp7t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1318.37, 116.559, -720.957)
+
+[node name="ScaffoldingStairs_01_A_258" parent="." instance=ExtResource("15_eyp7t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1314.52, 119.12, -720.957)
+
+[node name="ScaffoldingStairs_01_A_259" parent="." instance=ExtResource("15_eyp7t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1310.69, 121.67, -720.957)
+
+[node name="ScaffoldingStairs_01_A_260" parent="." instance=ExtResource("15_eyp7t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1306.88, 124.224, -720.957)
+
+[node name="MetalFence_02_1024" parent="." instance=ExtResource("16_vv585")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1338.56, 112.525, -760.565)
+
+[node name="MetalFence_02_1025" parent="." instance=ExtResource("16_vv585")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1328.56, 112.525, -760.565)
+
+[node name="MetalFence_02_1026" parent="." instance=ExtResource("16_vv585")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1318.56, 112.525, -760.565)
+
+[node name="MetalFence_02_1027" parent="." instance=ExtResource("16_vv585")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1308.56, 112.525, -760.565)
+
+[node name="MetalFence_02_1033" parent="." instance=ExtResource("16_vv585")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1338.56, 112.525, -702.065)
+
+[node name="MetalFence_02_1034" parent="." instance=ExtResource("16_vv585")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1328.56, 112.525, -702.065)
+
+[node name="MetalFence_02_1035" parent="." instance=ExtResource("16_vv585")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1318.56, 112.525, -702.065)
+
+[node name="MetalFence_02_1036" parent="." instance=ExtResource("16_vv585")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1308.56, 112.525, -702.065)
+
+[node name="MetalFence_02_1028" parent="." instance=ExtResource("16_vv585")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1297.1, 112.525, -758.461)
+
+[node name="MetalFence_02_1029" parent="." instance=ExtResource("16_vv585")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1297.1, 112.525, -748.461)
+
+[node name="MetalFence_02_1030" parent="." instance=ExtResource("16_vv585")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1297.1, 112.525, -738.461)
+
+[node name="MetalFence_02_1031" parent="." instance=ExtResource("16_vv585")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1297.1, 112.525, -728.461)
+
+[node name="MetalFence_02_1032" parent="." instance=ExtResource("16_vv585")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1297.1, 112.525, -717.961)
+
+[node name="MetalFence_02_1037" parent="." instance=ExtResource("16_vv585")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1338.6, 112.525, -758.461)
+
+[node name="MetalFence_02_1038" parent="." instance=ExtResource("16_vv585")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1338.6, 112.525, -748.461)
+
+[node name="MetalFence_02_1039" parent="." instance=ExtResource("16_vv585")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1338.6, 112.525, -738.461)
+
+[node name="MetalFence_02_1040" parent="." instance=ExtResource("16_vv585")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1338.6, 112.525, -728.461)
+
+[node name="MetalFence_02_1041" parent="." instance=ExtResource("16_vv585")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1338.6, 112.525, -717.961)
+
+[node name="MetalFence_02_256" parent="." instance=ExtResource("17_7n3pp")]
+transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, -1298.83, 112.525, -760.485)
+
+[node name="MetalFence_02_257" parent="." instance=ExtResource("17_7n3pp")]
+transform = Transform3D(-0.258819, 0, -0.965926, 0, 1, 0, 0.965926, 0, -0.258819, -1338.11, 112.525, -760.807)
+
+[node name="MetalFence_02_512" parent="." instance=ExtResource("18_0vn3p")]
+transform = Transform3D(2.98023e-08, 0, -1, 0, 1, 0, 1, 0, 2.98023e-08, -1338.61, 112.525, -707.559)
+
+[node name="MetalFence_02_513" parent="." instance=ExtResource("18_0vn3p")]
+transform = Transform3D(-0.170141, 0, -0.98542, 0, 1, 0, 0.98542, 0, -0.170141, -1297.12, 112.525, -707.427)
+
+[node name="MetalFence_02_1042" parent="." instance=ExtResource("16_vv585")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1337.92, 126.528, -719.169)
+
+[node name="MetalFence_02_1047" parent="." instance=ExtResource("16_vv585")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1337.92, 127.028, -708.833)
+
+[node name="MetalFence_02_1048" parent="." instance=ExtResource("16_vv585")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1327.92, 127.028, -708.833)
+
+[node name="MetalFence_02_1049" parent="." instance=ExtResource("16_vv585")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1317.92, 127.028, -708.833)
+
+[node name="MetalFence_02_1050" parent="." instance=ExtResource("16_vv585")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1308.42, 127.028, -708.833)
+
+[node name="MetalFence_02_1043" parent="." instance=ExtResource("16_vv585")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1328.07, 126.528, -719.169)
+
+[node name="MetalFence_02_1044" parent="." instance=ExtResource("16_vv585")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1313.36, 126.528, -719.169)
+
+[node name="MetalFence_02_1045" parent="." instance=ExtResource("16_vv585")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1298.15, 127.028, -721.635)
+
+[node name="MetalFence_02_1046" parent="." instance=ExtResource("16_vv585")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1337.89, 127.028, -718.88)
+
+[node name="MetalFence_02_258" parent="." instance=ExtResource("17_7n3pp")]
+transform = Transform3D(0.916086, 0, 0.400981, 0, 1, 0, -0.400981, 0, 0.916086, -1303.18, 127.028, -720.782)
+
+[node name="MetalFence_02_259" parent="." instance=ExtResource("17_7n3pp")]
+transform = Transform3D(0.999992, 0, 0.0039011, 0, 1, 0, -0.0039011, 0, 0.999992, -1300.69, 127.028, -721.802)
+
+[node name="MetalFence_02_260" parent="." instance=ExtResource("17_7n3pp")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1298.14, 127.028, -708.842)
+
+[node name="FiringRange_MatDecal_06" parent="." instance=ExtResource("14_eyp7t")]
+transform = Transform3D(-2.09814e-08, 0, -1.6, 0, 0.8, 0, 0.48, 0, -6.99382e-08, -1315.87, 127, -718.3)
+
+[node name="FiringRange_MatDecal_07" parent="." instance=ExtResource("14_eyp7t")]
+transform = Transform3D(-0.282842, 0, -0.848528, 0, 0.8, 0, 0.282842, 0, -0.848528, -1315.99, 127, -718.575)
+
+[node name="FiringRange_MatDecal_08" parent="." instance=ExtResource("14_eyp7t")]
+transform = Transform3D(0.282842, 0, -0.848528, 0, 0.8, 0, 0.282842, 0, 0.848528, -1315.76, 127, -718.571)
+
+[node name="Desk_Wooden_01" parent="." instance=ExtResource("19_5lgm6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1312.05, 126.971, -718.643)
+
+[node name="InteractPoint" type="Node3D" parent="Desk_Wooden_01"]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, 0.00598145, 0.763947, 0.195923)
+script = ExtResource("20_2ly7w")
+ObjId = 50
+
+[node name="PCBox_01" parent="Desk_Wooden_01" instance=ExtResource("21_2ly7w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.351685, 0.150551, 0.0149536)
+
+[node name="ComputerMouseKeyboard_01" parent="Desk_Wooden_01" instance=ExtResource("22_dipif")]
+transform = Transform3D(-1, 8.55071e-09, -8.70036e-08, 0, 0.995205, 0.0978087, 8.74228e-08, 0.0978087, -0.995205, 0.156738, 0.779999, 0.17511)
+
+[node name="ComputerMonitor_01" parent="Desk_Wooden_01" instance=ExtResource("23_s22t7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0516357, 0.728241, -0.219055)
+
+[node name="DeskLamp_Spot_01" parent="." instance=ExtResource("24_dipif")]
+transform = Transform3D(-0.832555, 0.0042321, -0.553926, 0.0856148, 0.988938, -0.121124, 0.547286, -0.148267, -0.823708, -1312.6, 127.725, -718.789)
+
+[node name="AreaTrigger" type="Node3D" parent="." node_paths=PackedStringArray("Area")]
+script = ExtResource("25_ltut5")
+ObjId = 40
+Area = NodePath("PolygonVolume")
+metadata/_custom_type_script = "uid://df5f3fjymj1x8"
+
+[node name="PolygonVolume" type="Node3D" parent="AreaTrigger"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1318.63, 109.299, -738.702)
+script = ExtResource("26_712rw")
+points = PackedVector2Array(-13.6295, -13.6275, -13.6295, 13.6038, 13.3538, 13.5418, 13.3538, -13.5034)
+height = 10.0
+color = Color(0, 0.6, 0.7, 0.42)
+metadata/_custom_type_script = "uid://ck5uniw0pl6u8"
