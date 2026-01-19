@@ -1884,26 +1884,356 @@
             "height": 10,
             "points": [
                 {
-                    "x": -1332.2595,
+                    "x": -1333.63,
                     "y": 109.299,
-                    "z": -752.3295
+                    "z": -753.702
                 },
                 {
-                    "x": -1332.2595,
+                    "x": -1333.63,
                     "y": 109.299,
-                    "z": -725.0982
+                    "z": -723.702
                 },
                 {
-                    "x": -1305.2762,
+                    "x": -1303.63,
                     "y": 109.299,
-                    "z": -725.1602
+                    "z": -723.702
                 },
                 {
-                    "x": -1305.2762,
+                    "x": -1303.63,
                     "y": 109.299,
-                    "z": -752.2054
+                    "z": -753.702
                 }
             ]
+        },
+        {
+            "name": "WorldIcon",
+            "type": "WorldIcon",
+            "ObjId": 60,
+            "iconColor": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "iconImagePicker": "Bomb",
+            "metadata/_custom_type_script": "uid://rtinef4afx25",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -1325.46,
+                "y": 200,
+                "z": -741.404
+            },
+            "id": "WorldIcon"
+        },
+        {
+            "name": "WorldIcon2",
+            "type": "WorldIcon",
+            "ObjId": 61,
+            "iconColor": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "iconImagePicker": "Bomb",
+            "metadata/_custom_type_script": "uid://rtinef4afx25",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -1325.06,
+                "y": 200,
+                "z": -741.404
+            },
+            "id": "WorldIcon2"
+        },
+        {
+            "name": "WorldIcon3",
+            "type": "WorldIcon",
+            "ObjId": 62,
+            "iconColor": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "iconImagePicker": "Bomb",
+            "metadata/_custom_type_script": "uid://rtinef4afx25",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -1324.66,
+                "y": 200,
+                "z": -741.404
+            },
+            "id": "WorldIcon3"
+        },
+        {
+            "name": "WorldIcon4",
+            "type": "WorldIcon",
+            "ObjId": 63,
+            "iconColor": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "iconImagePicker": "Bomb",
+            "metadata/_custom_type_script": "uid://rtinef4afx25",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -1324.26,
+                "y": 200,
+                "z": -741.404
+            },
+            "id": "WorldIcon4"
+        },
+        {
+            "name": "WorldIcon5",
+            "type": "WorldIcon",
+            "ObjId": 64,
+            "iconColor": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "iconImagePicker": "Bomb",
+            "metadata/_custom_type_script": "uid://rtinef4afx25",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -1323.86,
+                "y": 200,
+                "z": -741.404
+            },
+            "id": "WorldIcon5"
+        },
+        {
+            "name": "WorldIcon6",
+            "type": "WorldIcon",
+            "ObjId": 65,
+            "iconColor": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "iconImagePicker": "Bomb",
+            "metadata/_custom_type_script": "uid://rtinef4afx25",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -1323.46,
+                "y": 200,
+                "z": -741.404
+            },
+            "id": "WorldIcon6"
+        },
+        {
+            "name": "WorldIcon7",
+            "type": "WorldIcon",
+            "ObjId": 66,
+            "iconColor": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "iconImagePicker": "Bomb",
+            "metadata/_custom_type_script": "uid://rtinef4afx25",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -1323.06,
+                "y": 200,
+                "z": -741.404
+            },
+            "id": "WorldIcon7"
+        },
+        {
+            "name": "WorldIcon8",
+            "type": "WorldIcon",
+            "ObjId": 67,
+            "iconColor": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "iconImagePicker": "Bomb",
+            "metadata/_custom_type_script": "uid://rtinef4afx25",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -1322.66,
+                "y": 200,
+                "z": -741.404
+            },
+            "id": "WorldIcon8"
+        },
+        {
+            "name": "WorldIcon9",
+            "type": "WorldIcon",
+            "ObjId": 68,
+            "iconColor": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "iconImagePicker": "Bomb",
+            "metadata/_custom_type_script": "uid://rtinef4afx25",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -1322.26,
+                "y": 200,
+                "z": -741.404
+            },
+            "id": "WorldIcon9"
+        },
+        {
+            "name": "WorldIcon10",
+            "type": "WorldIcon",
+            "ObjId": 69,
+            "iconColor": [
+                1.0,
+                0.4,
+                0.4
+            ],
+            "iconImagePicker": "Cross",
+            "metadata/_custom_type_script": "uid://rtinef4afx25",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -1321.86,
+                "y": 200,
+                "z": -741.404
+            },
+            "id": "WorldIcon10"
         }
     ],
     "Static": [
