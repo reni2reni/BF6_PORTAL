@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://ewfejysxdyso"]
+[gd_scene load_steps=28 format=3 uid="uid://ewfejysxdyso"]
 
 [ext_resource type="PackedScene" path="res://objects/Gameplay/Common/HQ_PlayerSpawner.tscn" id="1_punef"]
 [ext_resource type="PackedScene" uid="uid://jv31so3xcr7p" path="res://addons/bf_portal/portal_tools/types/PolygonVolume/PolygonVolume.tscn" id="2_pxqk2"]
@@ -26,6 +26,7 @@
 [ext_resource type="PackedScene" path="res://objects/SouthernCalifornia/MP_Granite_Marina_Portal/Generic/Common/LightFixtures/DeskLamp_Spot_01.tscn" id="24_dipif"]
 [ext_resource type="Script" uid="uid://df5f3fjymj1x8" path="res://scripts/Gameplay/Common/AreaTrigger.gd" id="25_ltut5"]
 [ext_resource type="Script" uid="uid://ck5uniw0pl6u8" path="res://addons/bf_portal/portal_tools/types/PolygonVolume/PolygonVolume.gd" id="26_712rw"]
+[ext_resource type="Script" uid="uid://rtinef4afx25" path="res://scripts/Gameplay/Common/WorldIcon.gd" id="27_yq20e"]
 
 [node name="MP_Granite_Marina_Portal" type="Node3D"]
 
@@ -282,7 +283,87 @@ metadata/_custom_type_script = "uid://df5f3fjymj1x8"
 [node name="PolygonVolume" type="Node3D" parent="AreaTrigger"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1318.63, 109.299, -738.702)
 script = ExtResource("26_712rw")
-points = PackedVector2Array(-13.6295, -13.6275, -13.6295, 13.6038, 13.3538, 13.5418, 13.3538, -13.5034)
+points = PackedVector2Array(-15, -15, -15, 15, 15, 15, 15, -15)
 height = 10.0
 color = Color(0, 0.6, 0.7, 0.42)
 metadata/_custom_type_script = "uid://ck5uniw0pl6u8"
+
+[node name="WorldIcon" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1325.46, 200, -741.404)
+script = ExtResource("27_yq20e")
+ObjId = 60
+iconColor = [1.0, 1.0, 1.0]
+iconImagePicker = 8
+metadata/_custom_type_script = "uid://rtinef4afx25"
+
+[node name="WorldIcon2" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1325.06, 200, -741.404)
+script = ExtResource("27_yq20e")
+ObjId = 61
+iconColor = [1.0, 1.0, 1.0]
+iconImagePicker = 8
+metadata/_custom_type_script = "uid://rtinef4afx25"
+
+[node name="WorldIcon3" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1324.66, 200, -741.404)
+script = ExtResource("27_yq20e")
+ObjId = 62
+iconColor = [1.0, 1.0, 1.0]
+iconImagePicker = 8
+metadata/_custom_type_script = "uid://rtinef4afx25"
+
+[node name="WorldIcon4" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1324.26, 200, -741.404)
+script = ExtResource("27_yq20e")
+ObjId = 63
+iconColor = [1.0, 1.0, 1.0]
+iconImagePicker = 8
+metadata/_custom_type_script = "uid://rtinef4afx25"
+
+[node name="WorldIcon5" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1323.86, 200, -741.404)
+script = ExtResource("27_yq20e")
+ObjId = 64
+iconColor = [1.0, 1.0, 1.0]
+iconImagePicker = 8
+metadata/_custom_type_script = "uid://rtinef4afx25"
+
+[node name="WorldIcon6" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1323.46, 200, -741.404)
+script = ExtResource("27_yq20e")
+ObjId = 65
+iconColor = [1.0, 1.0, 1.0]
+iconImagePicker = 8
+metadata/_custom_type_script = "uid://rtinef4afx25"
+
+[node name="WorldIcon7" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1323.06, 200, -741.404)
+script = ExtResource("27_yq20e")
+ObjId = 66
+iconColor = [1.0, 1.0, 1.0]
+iconImagePicker = 8
+metadata/_custom_type_script = "uid://rtinef4afx25"
+
+[node name="WorldIcon8" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1322.66, 200, -741.404)
+script = ExtResource("27_yq20e")
+ObjId = 67
+iconColor = [1.0, 1.0, 1.0]
+iconImagePicker = 8
+metadata/_custom_type_script = "uid://rtinef4afx25"
+
+[node name="WorldIcon9" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1322.26, 200, -741.404)
+script = ExtResource("27_yq20e")
+ObjId = 68
+iconColor = [1.0, 1.0, 1.0]
+iconImagePicker = 8
+metadata/_custom_type_script = "uid://rtinef4afx25"
+
+[node name="WorldIcon10" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1321.86, 200, -741.404)
+script = ExtResource("27_yq20e")
+ObjId = 69
+iconColor = [1.0, 0.4, 0.4]
+iconImagePicker = 13
+metadata/_custom_type_script = "uid://rtinef4afx25"
