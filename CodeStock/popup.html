@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Code Stocker</h2>
+            <div class="header-buttons">
+                <div id="google_translate_element"></div>
+                <button id="undoBtn" title="Undo">↩️</button>
+                <button id="redoBtn" title="Redo">↪️</button>
+                <button id="exportBtn">Export</button>
+                <button id="importBtn">Import</button>
+                <button id="detachBtn" title="Open in window">⧉</button>
+                <input type="file" id="importFile" style="display:none">
+            </div>
+        </div>
+
+        <div id="inputWrapper">
+            <div class="input-section" id="inputArea">
+                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                    <div id="selectedColorPreview" title="Selected Color" style="
+                        width: 18px; height: 18px; border-radius: 50%; 
+                        border: 2px solid #555; background: transparent; 
+                        flex-shrink: 0; transition: background 0.3s;">
+                    </div>
+                    <div style="position: relative; flex: 1; display: flex; align-items: center;">
+                        <input id="nameInput" placeholder="🏷️name" style="padding-right: 30px; width: 100%;">
+                        <button id="clearNameBtn"
+                            style="position: absolute; right: 8px; border: none; background: none; cursor: pointer; color: #c2c1c1; font-weight: bold; display: none;">✕</button>
+                    </div>
+                </div>
+
+                <div style="position: relative; display: flex; align-items: center; margin-bottom: 8px;">
+                    <textarea id="codeInput" placeholder="📝code(paste)" style="padding-right: 30px;"></textarea>
+                    <button id="clearCodeBtn"
+                        style="position: absolute; right: 8px; top: 8px; border: none; background: none; cursor: pointer; color: #c2c1c1; font-weight: bold; display: none;">✕</button>
+                </div>
+
+                <div id="parentPicker" class="parent-picker"></div>
+                <div id="colorPicker" class="color-picker"></div>
+
+                <div class="action-buttons">
+                    <button id="saveBtn">SAVE</button>
+                    <button id="cancelBtn">Cancel</button>
+                    <button id="paletteExportBtn">Pal.Exp</button>
+                    <button id="paletteImportBtn">Pal.Imp</button>
+                </div>
+                <input type="file" id="paletteImportFile" style="display:none" accept=".pal">
+            </div>
+            <div id="toggleInputBtn" style="font-size: 16px; cursor: pointer;">☰</div>
+        </div>
+
+        <div class="list-section" style="padding: 0 8px;">
+            <div class="search-container" style="position: relative; display: flex; align-items: center; margin-bottom: 0px;">
+                <input type="text" id="searchBox" placeholder="🔎Search items..."
+                    style="flex: 1; padding-right: 30px; box-sizing: border-box;">
+                <button id="clearSearchBtn"
+                    style="position: absolute; right: 8px; border: none; background: none; cursor: pointer; color: #c2c1c1; font-weight: bold; display: none;">✕</button>
+            </div>
+            <div style="display: flex; align-items: center; gap: 6px; margin-bottom: 4px;">
+                <div id="parentFilter" class="parent-filter" style="flex: 1; margin: 0; display: flex; align-items: center;">
+                </div>
+                <button id="allSelectBtn" title="Select All / Clear All"
+                    style="width:28px; height: 20px; font-size: 12px; font-weight: bold; cursor: pointer; border-radius: 4px; border: 1px solid #555; background: #636e72; color: white; flex-shrink: 0; padding: 0;">
+                    ALL
+                </button>
+            </div>
+        
+            <div class="filter-wrapper" style="display: flex; gap: 6px; align-items: center; margin-bottom: 0px;">
+                <div id="filterColors" class="filter-colors"
+                    style="flex: 1;"></div>
+                <button id="modeToggle" title="Click to Switch Mode"
+                    style="width: 28px; height: 20px; font-size: 14px; border-radius: 4px; border: 1px solid #555; background: #0984e3; color: white; flex-shrink: 0; padding: 0;">
+                </button>
+            </div>
+        
+            <div id="itemList" style="width: 100%; box-sizing: border-box;"></div>
+        </div>
+    </div>
+
+    <div class="storage-info" style="padding: 8px; border-top: 1px solid #444; background: #222;">
+        <div class="storage-bar-container"
+            style="width: 100%; height: 6px; background: #333; border-radius: 3px; overflow: hidden; margin-bottom: 4px;">
+            <div id="storageBar" class="storage-bar"
+                style="width: 0%; height: 100%; background: #0984e3; transition: width 0.3s;"></div>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div id="storageText" style="font-size: 10px; color: #ccc;">0.0 KB / 5120 KB</div>
+            <div id="saveStatus" style="display: flex; align-items: center; gap: 6px;">
+                <span id="saveDot"
+                    style="width: 8px; height: 8px; background: #444; border-radius: 50%; display: inline-block; transition: background 0.3s;"></span>
+                <span id="saveLabel"
+                    style="font-size: 9px; color: #666; font-weight: bold; letter-spacing: 0.5px;">READY</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+    <input type="color" id="hiddenColorPicker"
+        style="position: fixed; opacity: 0; pointer-events: none; width: 0; height: 0;">
+</body>
+
+</html>
