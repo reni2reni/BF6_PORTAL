@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+    <div class="container">
+    <div style="display:flex;justify-content:space-between;align-items:center;">
+        <div class="title">🐛Code Stock</div>
+        <div>
+            <button id="exportBtn">EXPORT</button>
+            <button id="importBtn">IMPORT</button>
+            <input type="file" id="importFile" accept=".json" style="display:none;">
+            <button id="openWindow" class="windowBtn">⮺</button>
+        </div>
+    </div>
+        <div class="tabGroup">
+            <div id="parentTabs" class="tabs"></div>
+            <div id="childTabs" class="tabs child"></div>
+            <div id="colorTabs"></div>
+        </div>
+        <div id="inputSection">
+            <div class="inputRow">
+                <div class="inputLeft">
+                    <!-- コードネーム入力 -->
+                    <div class="inputWrapper">
+                        <input id="codeTitle" placeholder="🏷️Code name">
+                        <button class="clearBtn" id="clearCodeTitle">✕</button>
+                    </div>
+                    <!-- コード内容入力 -->
+                    <div class="inputWrapper">
+                        <textarea id="codeBody" placeholder="📝Code body"></textarea>
+                        <button class="clearBtn" id="clearCodeBody">✕</button>
+                    </div>
+                    <div class="inputRight">
+                    <button id="addBtn">ADD</button>
+                    <button id="cancelBtn">CANCEL</button>                        
+                        <button id="parentMinus">◁</button>
+                        <span id="parentSize">4</span>
+                        <button id="parentPlus">▷</button>                    
+                        <button id="childMinus">◁</button>
+                        <span id="childSize">4</span>
+                        <button id="childPlus">▷</button>                   
+                </div>
+                </div>                
+            </div>
+            <button id="toggleInput">≡ CLOSE ≡</button>
+        </div>
+        <div class="filterArea">
+            <div>
+                <div id="filterParent" class="tabs"></div>
+                <div id="filterChild" class="tabs child"></div>
+                <div id="filterColorTabs"></div>
+            </div>
+                <div class="inputWrapper">
+                <input id="searchBox" placeholder="🔎search">
+                <button class="clearBtn" id="clearSearchBox">✕</button>
+            </div>
+        </div>
+
+        <div id="list"></div>
+    </div>
+    <div id="storageInfo">
+        <div id="storageBarContainer" style="width:100%; height:8px; background:#444; border-radius:4px; margin-bottom:4px;">
+            <div id="storageBar" style="width:0%; height:100%; background:#4a7bd4; border-radius:4px;"></div>
+        </div>
+        <span id="storageSize">0 KB / 5120 KB</span>
+        <span id="storageLamp"></span>
+    </div>
+    <script src="popup.js"></script>
+</body>
+
+</html>

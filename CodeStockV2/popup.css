@@ -1,0 +1,430 @@
+body {
+  border-radius: 10px;
+    width: 400;
+    height: 600;
+    margin: 0;
+    padding: 6px;
+    background: #111;
+    color: white;
+    font-family: sans-serif;
+}
+
+.container {
+  display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.title {
+  font-size: 18px;
+    text-align: left;
+    margin-bottom: 6px;
+}
+
+.windowBtn {
+  font-size: 18px;
+    background: #333;
+    color: white;
+}
+
+.tabs {
+  display: flex;
+    gap: 2px;
+}
+
+.child {
+  margin-bottom: 4px;
+}
+
+.tab {
+  flex: 1;
+    height: 20px;
+    background: #2a2a2a;
+    cursor: pointer;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid #444;
+}
+
+.tab:hover {
+  background: #333;
+}
+
+.tab.active {
+  border: 2px solid rgb(182, 181, 181);
+    border-bottom: 4px solid rgb(210, 210, 210);
+    background-color: #222;
+    color: white;
+}
+
+#inputSection {
+  margin-bottom: 6px;
+}
+
+.inputRow {
+  display: flex;
+    gap: 4px;
+}
+
+.inputLeft {
+  width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    box-sizing: border-box;
+}
+
+.inputRight {
+  display: flex;
+    flex-direction: row;
+    gap: 4px;
+    justify-content: flex-start;
+    width: 50%;
+}
+
+.inputWrapper {
+  position: relative;
+    width: 100%;
+}
+
+#codeTitle,
+#codeBody,
+#searchBox {
+  width: 100%;
+    box-sizing: border-box;
+    padding: 3px;
+    background: #2a2a2a;
+    border: none;
+    color: white;
+}
+
+#codeTitle {
+  height: 30px;
+    font-size: 18px;
+}
+
+#codeBody {
+  height: 80px;
+    font-size: 16px;
+    resize: none;
+}
+
+#searchBox {
+  height: 30px;
+    font-size: 18px;
+    margin-top: 3px;
+}
+
+.clearBtn {
+  position: absolute;
+    right: 24px;
+    /* 16pxスクロールバー + 8pxマージン */
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    background: #555;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+    line-height: 18px;
+    z-index: 10;
+    /* 入力欄上に表示されるように */
+}
+
+.clearBtn:hover {
+  background: #ad1a1a;
+}
+
+#toggleInput {
+  width: 100%;
+    height: 30px;
+    background: #444;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-top: 3px;
+}
+
+#list {
+  flex: 1;
+    overflow: auto;
+    margin-top: 4px;
+}
+
+.item {
+  display: flex;
+    background: #262626;
+    padding: 4px;
+    margin-bottom: 2px;
+    cursor: pointer;
+    font-size: 16px;
+    justify-content: space-between;
+}
+
+.item:hover {
+  background: #333;
+}
+
+.itemTitle {
+  flex: 1;
+    margin-left: 6px;
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.itemTitle:active {
+  background: #555;
+    transform: scale(0.9);
+}
+
+.item button {
+  background: #333;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 2px 4px;
+}
+
+.item button:hover {
+  background: #0984e3;
+}
+
+.item.selected {
+  background: #2a2f3a;
+    border-left: 3px solid #4da3ff;
+}
+
+.item.dragging {
+  opacity: .5;
+}
+
+.item.dragTarget {
+  border-top: 2px solid #4da3ff;
+}
+
+.selected {
+  background: #2a3a55;
+    outline: 1px solid #4a7bd4;
+}
+
+.dragging {
+  opacity: 0.35;
+}
+
+.dragTarget {
+  border-top: 2px solid #4a7bd4;
+}
+
+#addBtn,
+#cancelBtn {
+  width: 76;
+  min-width: 76px;
+  background: #333;
+    color: white;
+}
+
+#cancelBtn {
+  font-size: 14px !important;
+  }
+
+#addBtn {
+  background: #2259a8;
+    color: white;
+}
+
+#addBtn:hover {
+  background: #6b86ff;
+    color: white;
+}
+
+#cancelBtn {
+  margin-right: 8px;
+  background: #482020;
+    color: white;
+}
+
+#cancelBtn:hover {
+  background: #f36758;
+}
+
+#codeTitle,
+#codeBody {
+  width: 100%;
+    box-sizing: border-box;
+}
+
+#storageLamp {
+  width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #333;
+    display: inline-block;
+}
+
+#exportBtn,
+#importBtn {
+  height: 28px;
+    width: 70px;
+    font-size: 14px;
+    padding: 0 6px;
+    background: #333;
+    color: white;
+}
+
+.tabSizeControl {
+  display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+#parentSize,
+#childSize {
+  font-size: 20px;
+}
+
+#parentMinus,
+#parentPlus,
+#childMinus,
+#childPlus {
+  font-size: 20px;
+    width: 38px;
+    text-align: center;
+    background: #333;
+    color: white;
+}
+
+#parentTabs .tab,
+#filterParent .tab {
+  font-size: 14px;
+    /* 親タブの文字サイズ */
+}
+
+#childTabs .tab,
+#filterChild .tab {
+  font-size: 14px;
+    /* 子タブの文字サイズ */
+}
+
+.item>div:last-child .editBtn {
+  font-size: 14px;
+    padding: 2px 2px;
+    min-width: 40px;
+    height: 20px;
+    line-height: 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.item>div:last-child .editBtn:hover {
+  background-color: #3571b3;
+}
+
+.item .delBtn:hover {
+  background: #e74c3c;
+    /* 赤 */
+}
+
+.item .delBtn {
+  font-size: 14px;
+    padding: 2px 2px;
+    min-width: 18px;
+    height: 18px;
+    line-height: 18px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#saveDelayBtn {
+  height: 26px;
+    width: 36px;
+    font-size: 14px;
+    padding: 0 6px;
+    background: #333;
+    color: white;
+}
+
+/* 通常のタブ */
+.tab {
+  padding: 1px 1px;
+    margin: 1px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.tab.selected{
+      /* 上・左右に線を引く */
+        border: 2px solid #FFF;
+        /* 下線だけを消す */
+        border-bottom: none;
+}
+/* スクロールバー全体 */
+#list::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* スクロールバー背景 */
+#list::-webkit-scrollbar-track {
+    background: #1e1e1e;
+}
+
+/* スクロールバーのつまみ */
+#list::-webkit-scrollbar-thumb {
+    background: #444;
+    border-radius: 6px;
+}
+
+/* ホバー時 */
+#list::-webkit-scrollbar-thumb:hover {
+    background: #666;
+}
+/* 親タブ 通常 */
+#parentTabs .tab,
+#filterParent .tab {
+    background: #111;
+    color: #A0A0A0;
+}
+
+/* 親タブ 選択 */
+#parentTabs .tab.active,
+#filterParent .tab.active {
+    background: #333;
+    color: white;
+}
+
+/* 子タブ 通常 */
+#childTabs .tab,
+#filterChild .tab {
+    background: #333;
+    color: #E0E0E0;
+}
+#childTabs .tab.active,
+#filterChild .tab.active {
+    background: #333;
+    color: white;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 95vh;
+}
