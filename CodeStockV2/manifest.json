@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "CodeStock",
+    "version": "2.0",
+    "icons": {
+        "128": "icon.png"
+    },
+ "side_panel": {
+    "default_path": "popup.html"
+},
+"permissions": [
+    "sidePanel",
+    "storage"
+]
+}
+
